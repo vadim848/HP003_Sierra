@@ -23,6 +23,18 @@
     <Compile Include="DUTs\MotorParams_typ.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DUTs\str_AI_IOs.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\str_DI_IOs.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\str_DO_IOs.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\str_AO_IOs.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\str_EL1008.TcDUT">
       <SubType>Code</SubType>
     </Compile>
@@ -42,6 +54,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\str_EL3152.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\str_IOs.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GlobalTextList.TcGTLO">

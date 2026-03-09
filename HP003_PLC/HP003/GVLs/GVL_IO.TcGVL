@@ -6,15 +6,17 @@
 VAR_GLOBAL
 	
 	//DI
-		arr_DI_1008	AT%I*:	ARRAY [1..8] OF str_EL1008 	;
-		arr_DI_2819	AT%I*:	ARRAY [1..16] OF str_EL2819	;
+		arr_DI_1008	AT%I*:	str_EL1008 	;
+		arr_DI_2819	AT%I*:	str_EL2819	;
+	//DO
+		arr_DO_2819	AT%Q*:	str_EL2819	;	
 	//AI
-		arr_AI_3004	AT%I*:	ARRAY [1..4] OF str_EL3004	;
-		arr_AI_3152	AT%I*:	ARRAY [1..2] OF str_EL3152	;
-		arr_AI_3162	AT%I*:	ARRAY [1..2] OF str_EL3162	;
-		arr_AI_3114	AT%I*:	ARRAY [1..4] OF str_EL3314	;
+		arr_AI_3004	AT%I*:	str_EL3004	;
+		arr_AI_3152	AT%I*:	str_EL3152	;
+		arr_AI_3162	AT%I*:	str_EL3162	;
+		arr_AI_3114	AT%I*:	str_EL3314	;
 	//AO
-		arr_AO_4008	AT%Q*:	ARRAY [1..8] OF str_EL4008	;	
+		arr_AO_4008	AT%Q*:	str_EL4008	;	
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

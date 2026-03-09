@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="str_DO_IOs" Id="{86911ac6-4005-469d-a430-043812e19ee7}">
+    <Declaration><![CDATA[TYPE str_DO_IOs :
+STRUCT
+	t1FrontEngValve		:	BOOL;
+	t1FrontDisengValve	:	BOOL;
+	t1RearEngValve		:	BOOL;
+	t1RearDisengValve	:	BOOL;
+	
+	t2FrontEngValve		:	BOOL;
+	t2FrontDisengValve	:	BOOL;
+	t2RearEngValve		:	BOOL;
+	t2RearDisengValve	:	BOOL;
+	
+	tnsEngFrontValve	:	BOOL;
+	tnsDisengFrontValve	:	BOOL;
+	tnsEngRearValve		:	BOOL;
+	tnsDisengRearValve	:	BOOL;
+	
+	irLampCtrlEnable	:	BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

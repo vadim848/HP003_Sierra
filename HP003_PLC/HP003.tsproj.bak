@@ -1424,6 +1424,298 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
+			<Name GUID="{3585D0B2-8A26-A42A-A484-410C854924F3}" AutoDeleteType="true">str_EL3152</Name>
+			<BitSize>32</BitSize>
+			<SubItem>
+				<Name>channel_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{1C2C26E8-7F0D-3366-B27F-A3F5BD7679AE}" AutoDeleteType="true">str_EL3162</Name>
+			<BitSize>16</BitSize>
+			<SubItem>
+				<Name>channel_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{D82ACCFD-7758-57D4-0CBC-1783E9BE952E}" AutoDeleteType="true">str_EL1008</Name>
+			<BitSize>64</BitSize>
+			<SubItem>
+				<Name>channel_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>40</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_8</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>56</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{85495004-7DFA-AEB5-23C2-B16D525C08C8}" AutoDeleteType="true">str_EL2819</Name>
+			<BitSize>128</BitSize>
+			<SubItem>
+				<Name>channel_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>40</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_8</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>56</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_9</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_10</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>72</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_11</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_12</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>88</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_13</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_14</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>104</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_15</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_16</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>120</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{FE55E545-045C-8316-B5BD-AB5B413A9580}" AutoDeleteType="true">str_EL3004</Name>
+			<BitSize>64</BitSize>
+			<SubItem>
+				<Name>channel_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{B093E579-7C5A-024F-D651-4686FA68BAB2}" AutoDeleteType="true">str_EL3314</Name>
+			<BitSize>64</BitSize>
+			<SubItem>
+				<Name>channel_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name GUID="{7525D452-1409-67E4-FF42-148BD526E579}" AutoDeleteType="true">str_EL4008</Name>
+			<BitSize>128</BitSize>
+			<SubItem>
+				<Name>channel_1</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_2</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_3</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_4</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_5</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_6</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_7</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>channel_8</Name>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>112</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
 			<Name GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety" TcBaseType="true">FSOE_6</Name>
 			<BitSize>48</BitSize>
 			<SubItem>
@@ -2452,11 +2744,19 @@ External Setpoint Generation:
 		</Motion>
 		<Plc>
 			<Project GUID="{596ECAB5-0B2F-4E7C-B383-C29045CC84ED}" Name="HP003" PrjFilePath="HP003\HP003.plcproj" TmcFilePath="HP003\HP003.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{F5214D12-23E2-C513-7F7A-CADA2FA03CEA}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="HP003\HP003.tmc" TmcHash="{05CC1C6C-E680-1C22-CDDB-AFE0284357A7}">
 					<Name>HP003 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>GVL_IO.arr_AI_3152</Name>
+							<Type GUID="{3585D0B2-8A26-A42A-A484-410C854924F3}">str_EL3152</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.arr_AI_3162</Name>
+							<Type GUID="{1C2C26E8-7F0D-3366-B27F-A3F5BD7679AE}">str_EL3162</Type>
+						</Var>
 						<Var>
 							<Name>GVL_AXES.ax_ITM.NcToPlc</Name>
 							<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
@@ -2472,6 +2772,24 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_AXES.ax_LatSkew.NcToPlc</Name>
 							<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.arr_DI_1008</Name>
+							<Comment><![CDATA[DI]]></Comment>
+							<Type GUID="{D82ACCFD-7758-57D4-0CBC-1783E9BE952E}">str_EL1008</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.arr_DI_2819</Name>
+							<Type GUID="{85495004-7DFA-AEB5-23C2-B16D525C08C8}">str_EL2819</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.arr_AI_3004</Name>
+							<Comment><![CDATA[AI]]></Comment>
+							<Type GUID="{FE55E545-045C-8316-B5BD-AB5B413A9580}">str_EL3004</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.arr_AI_3114</Name>
+							<Type GUID="{B093E579-7C5A-024F-D651-4686FA68BAB2}">str_EL3314</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -2491,6 +2809,16 @@ External Setpoint Generation:
 						<Var>
 							<Name>GVL_AXES.ax_LatSkew.PlcToNc</Name>
 							<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.arr_DO_2819</Name>
+							<Comment><![CDATA[DO]]></Comment>
+							<Type GUID="{85495004-7DFA-AEB5-23C2-B16D525C08C8}">str_EL2819</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.arr_AO_4008</Name>
+							<Comment><![CDATA[AO]]></Comment>
+							<Type GUID="{7525D452-1409-67E4-FF42-148BD526E579}">str_EL4008</Type>
 						</Var>
 					</Vars>
 					<Contexts>
@@ -2539,6 +2867,9 @@ External Setpoint Generation:
 				</AddressInfo>
 				<Image Id="2" AddrType="9" ImageType="3">
 					<Name>Image</Name>
+				</Image>
+				<Image Id="4" AddrType="10" ImageType="3">
+					<Name>Image-2</Name>
 				</Image>
 				<Box Id="1" BoxType="9099">
 					<Name>Term 1 (EK1100)</Name>
@@ -13088,4 +13419,59 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</Device>
 		</Io>
 	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500841000403}" Id="#x02030030"/>
+		<MappingInfo Identifier="{00000000-0040-0304-2000-040341000403}" Id="#x02030020"/>
+		<MappingInfo Identifier="{03040020-0020-0304-2000-040320000403}" Id="#x02030010" Watchdog="04000000040000000400000004000000"/>
+		<OwnerA Name="TIID^Device 2 (EtherCAT)">
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1100)^Term 11 (EK1122)^Box 12 (AMI8000-0100)">
+				<Link VarA="Term 1 (EK1100)^Term 2 (EL6910)^ConnectionInputs^TwinSafeGroup1.Box 12 (AMI8000-0100)_7 TxPDO" VarB="Module 1 (SAFETY)^SAFETY FSoE Connection 1 Receive Message^FSOE"/>
+				<Link VarA="Term 1 (EK1100)^Term 2 (EL6910)^ConnectionOutputs^TwinSafeGroup1.Box 12 (AMI8000-0100)_7 RxPDO" VarB="Module 1 (SAFETY)^SAFETY FSoE Connection 1 Send Message^FSOE"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1100)^Term 2 (EL6910)">
+				<Link VarA="Term 1 (EK1100)^Term 3 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE" VarB="ConnectionOutputs^TwinSafeGroup1.Term 3 (EL1904)_3 RxPDO"/>
+				<Link VarA="Term 1 (EK1100)^Term 4 (EL2912)^Module 1 (FSOE)^FSoE Inputs^FSOE" VarB="ConnectionOutputs^TwinSafeGroup1.Term 4 (EL2912)_4 RxPDO"/>
+				<Link VarA="Term 1 (EK1100)^Term 4 (EL2912)^Module 1 (FSOE)^FSoE Outputs^FSOE" VarB="ConnectionInputs^TwinSafeGroup1.Term 4 (EL2912)_4 TxPDO"/>
+				<Link VarA="Term 1 (EK1100)^Term 8 (EK1122)^Box 10 (AMI8000-0100)^Module 1 (SAFETY)^SAFETY FSoE Connection 1 Send Message^FSOE" VarB="ConnectionOutputs^TwinSafeGroup1.Box 10 (AMI8000-0100)_6 RxPDO"/>
+				<Link VarA="Term 1 (EK1100)^Term 8 (EK1122)^Box 9 (AMI8000-0100)^Module 1 (SAFETY)^SAFETY FSoE Connection 1 Receive Message^FSOE" VarB="ConnectionInputs^TwinSafeGroup1.Box 9 (AMI8000-0100)_5 TxPDO"/>
+				<Link VarA="Term 1 (EK1100)^Term 8 (EK1122)^Box 9 (AMI8000-0100)^Module 1 (SAFETY)^SAFETY FSoE Connection 1 Send Message^FSOE" VarB="ConnectionOutputs^TwinSafeGroup1.Box 9 (AMI8000-0100)_5 RxPDO"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL1904)">
+				<Link VarA="Term 1 (EK1100)^Term 2 (EL6910)^ConnectionInputs^TwinSafeGroup1.Term 3 (EL1904)_3 TxPDO" VarB="Module 1 (FSOES)^RxPDO^FSOE"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1100)^Term 8 (EK1122)^Box 10 (AMI8000-0100)">
+				<Link VarA="Term 1 (EK1100)^Term 2 (EL6910)^ConnectionInputs^TwinSafeGroup1.Box 10 (AMI8000-0100)_6 TxPDO" VarB="Module 1 (SAFETY)^SAFETY FSoE Connection 1 Receive Message^FSOE"/>
+			</OwnerB>
+		</OwnerA>
+		<OwnerA Name="TIPC^HP003^HP003 Instance">
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 13 (EK1100)^Term 14 (EL2819)">
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_1" VarB="DIG Outputs^Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_10" VarB="DIG Outputs^Channel 10^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_11" VarB="DIG Outputs^Channel 11^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_12" VarB="DIG Outputs^Channel 12^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_13" VarB="DIG Outputs^Channel 13^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_14" VarB="DIG Outputs^Channel 14^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_15" VarB="DIG Outputs^Channel 15^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_16" VarB="DIG Outputs^Channel 16^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_2" VarB="DIG Outputs^Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_3" VarB="DIG Outputs^Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_4" VarB="DIG Outputs^Channel 4^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_5" VarB="DIG Outputs^Channel 5^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_6" VarB="DIG Outputs^Channel 6^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_7" VarB="DIG Outputs^Channel 7^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_8" VarB="DIG Outputs^Channel 8^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_DO_2819^channel_9" VarB="DIG Outputs^Channel 9^Output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 13 (EK1100)^Term 15 (EL4008)">
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_AO_4008^channel_1" VarB="AO Outputs Channel 1^Analog output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_AO_4008^channel_2" VarB="AO Outputs Channel 2^Analog output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_AO_4008^channel_3" VarB="AO Outputs Channel 3^Analog output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_AO_4008^channel_4" VarB="AO Outputs Channel 4^Analog output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_AO_4008^channel_5" VarB="AO Outputs Channel 5^Analog output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_AO_4008^channel_6" VarB="AO Outputs Channel 6^Analog output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_AO_4008^channel_7" VarB="AO Outputs Channel 7^Analog output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.arr_AO_4008^channel_8" VarB="AO Outputs Channel 8^Analog output"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
 </TcSmProject>

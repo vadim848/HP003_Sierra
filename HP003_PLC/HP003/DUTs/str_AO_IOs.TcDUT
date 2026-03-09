@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="str_AO_IOs" Id="{c0f7bad2-0c19-4b58-8ee7-794e2702d52b}">
+    <Declaration><![CDATA[TYPE str_AO_IOs :
+STRUCT
+	t1FrontRegulator	: INT;
+	t1RearRegulator		: INT;
+	t2FrontRegulator	: INT;
+	t2RearRegulator		: INT;
+	tensFrontRegulator	: INT;
+	tensRearRegulator	: INT;
+	irLampCtrl			: INT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
