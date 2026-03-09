@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_ReadWrite_NC_PB" Id="{d1e7d093-afc9-4066-85e9-84ac277ec7ec}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ReadWrite_NC_PB
+VAR_INPUT
+	bReadParameter      : BOOL;
+	bWriteParameter     : BOOL;
+	iAxisNum            : INT;
+	mcAxisParameter     : MC_AxisParameter;   //16#0001_0007 
+END_VAR
+VAR_OUTPUT
+	fReadEncoderOffset  : LREAL;	
+	bReatBusy           : BOOL;
+	bWriteBusy          : BOOL;
+	bReatError           : BOOL;
+	bWriteError          : BOOL;
+END_VAR
+VAR
+	mcReadParameter  : MC_ReadParameter;
+	mcWriteParameter : MC_WriteParameter;	
+END_VAR
+VAR_IN_OUT
+	fWriteEncoderOffset : LREAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+mcReadParameter(
+	Axis:= stAxis[iAxisNum] , 
+	Enable:= bReadParameter , 
+	ParameterNumber:= mcAxisParameter , 
+	ReadMode:= , 
+	Valid=> , 
+	Busy=> bReatBusy , 
+	Error=> bReatError , 
+	ErrorID=> , 
+	Value=>fReadEncoderOffset );
+	
+	
+mcWriteParameter(
+	Axis:= stAxis[iAxisNum] , 
+	Execute:= bWriteParameter , 
+	ParameterNumber:= mcAxisParameter, 
+	Value:= fWriteEncoderOffset, 
+	Done=> , 
+	Busy=> bWriteBusy , 
+	Error=> bWriteError , 
+	ErrorID=> );
+	]]></ST>
+    </Implementation>
+    <LineIds Name="FB_ReadWrite_NC_PB">
+      <LineId Id="37" Count="0" />
+      <LineId Id="28" Count="8" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="46" Count="1" />
+      <LineId Id="49" Count="7" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="78" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

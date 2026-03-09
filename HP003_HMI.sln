@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# TcXaeShell Solution File, Format Version 11.00
+VisualStudioVersion = 15.0.35826.109
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FE7A1B72-C5B7-4D7C-BB7D-76384D4DE8E1}") = "HP003_HMI", "HP003_HMI\HP003_HMI.hmiproj", "{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|TwinCAT CE7 (ARMV7) = Debug|TwinCAT CE7 (ARMV7)
+		Debug|TwinCAT HMI = Debug|TwinCAT HMI
+		Debug|TwinCAT OS (ARMT2) = Debug|TwinCAT OS (ARMT2)
+		Debug|TwinCAT RT (x64) = Debug|TwinCAT RT (x64)
+		Debug|TwinCAT RT (x86) = Debug|TwinCAT RT (x86)
+		Release|TwinCAT CE7 (ARMV7) = Release|TwinCAT CE7 (ARMV7)
+		Release|TwinCAT HMI = Release|TwinCAT HMI
+		Release|TwinCAT OS (ARMT2) = Release|TwinCAT OS (ARMT2)
+		Release|TwinCAT RT (x64) = Release|TwinCAT RT (x64)
+		Release|TwinCAT RT (x86) = Release|TwinCAT RT (x86)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Debug|TwinCAT CE7 (ARMV7).ActiveCfg = Debug|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Debug|TwinCAT OS (ARMT2).ActiveCfg = Debug|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Debug|TwinCAT RT (x64).ActiveCfg = Debug|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Debug|TwinCAT RT (x86).ActiveCfg = Debug|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Release|TwinCAT CE7 (ARMV7).ActiveCfg = Release|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Release|TwinCAT OS (ARMT2).ActiveCfg = Release|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Release|TwinCAT RT (x64).ActiveCfg = Release|TwinCAT HMI
+		{37C6FE8B-F49F-4757-B3DE-80F378D8B9EA}.Release|TwinCAT RT (x86).ActiveCfg = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {109BEF22-7CF7-4F2F-9EAC-E110145A1FC6}
+	EndGlobalSection
+EndGlobal

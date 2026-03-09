@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Refactors>
+  <Renames>
+    <RenamedType>
+      <Type guid="8cce9701-b944-4d6f-bbcc-cc2817d4b34d">GLOBAL</Type>
+      <From>Global</From>
+      <To>GVL_AXES</To>
+    </RenamedType>
+  </Renames>
+</Refactors>

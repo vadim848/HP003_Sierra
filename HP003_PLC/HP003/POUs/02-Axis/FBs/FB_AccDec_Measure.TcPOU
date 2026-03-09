@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_AccDec_Measure" Id="{2b5f634a-3fd7-4a1c-91fe-8450b596fb76}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AccDec_Measure
+VAR_INPUT
+	bMeasure: BOOL;
+	Axis: AXIS_REF;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	rt_ACC		: R_TRIG;
+	ft_ACC		: F_TRIG;
+	rt_DEC		: R_TRIG;
+	ft_DEC		: F_TRIG;
+	
+	mrACC		: BOOL;
+	mfACC		: BOOL;
+	mrDEC		: BOOL;
+	mfDEC		: BOOL;
+	
+	fACC_Start	: LREAL;
+	fACC_Stop	: LREAL;
+	fDEC_Start	: LREAL;
+	fDEC_Stop	: LREAL;	
+	
+	rt_Count	: R_TRIG;
+
+
+	cACC: INT;
+	cDEC: INT;
+	cACC1: INT;
+	cDEC1: INT;	
+END_VAR
+VAR_OUTPUT
+	fACC_Distance: LREAL;
+	fDEC_Distance: LREAL;	
+	fResultDist: LREAL; // the hiher value from the 2 acc/ Dec
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[rt_ACC(CLK:=Axis.Status.Accelerating);
+ft_ACC(CLK:=Axis.Status.Accelerating);
+
+rt_DEC(CLK:=Axis.Status.Decelerating);
+ft_DEC(CLK:=Axis.Status.Decelerating);
+
+rt_Count(CLK:=bMeasure);
+IF rt_Count.Q THEN;
+	cACC		:=0;
+	cDEC		:=0;	
+	cACC1		:=0;
+	cDEC1		:=0;
+	mrACC		:=FALSE;
+	mfACC		:=FALSE;
+	mrDEC		:=FALSE;
+	mfDEC		:=FALSE;	
+END_IF
+
+IF bMeasure THEN;
+	IF rt_ACC.Q AND NOT mrACC THEN;
+		fACC_Start:=Axis.NcToPlc.ActPos;
+		cACC:=cACC+1;
+		mrACC:=TRUE;
+	END_IF
+	IF ft_ACC.Q AND NOT mfACC THEN;
+		fACC_Stop:=Axis.NcToPlc.ActPos;
+		cACC1:=cACC1+1;		
+		fACC_Distance:=ABS(fACC_Start-fACC_Stop);
+		mfACC:=TRUE;
+	END_IF
+	
+	IF rt_DEC.Q AND NOT mrDEC THEN;
+		fDEC_Start:=Axis.NcToPlc.ActPos;
+		cDEC:=cDEC+1;
+		mrDEC:=TRUE;
+	END_IF
+	IF ft_DEC.Q AND NOT mfDEC THEN;
+		fDEC_Stop:=Axis.NcToPlc.ActPos;
+		cDEC1:=cDEC1+1;		
+		fDEC_Distance:=ABS(fDEC_Start-fDEC_Stop);
+		mfDEC:=TRUE;
+	END_IF	
+END_IF
+
+IF fACC_Distance>=fDEC_Distance THEN
+	fResultDist:=fACC_Distance;
+ELSE
+	fResultDist:=fDEC_Distance;
+END_IF
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_AccDec_Measure">
+      <LineId Id="14" Count="1" />
+      <LineId Id="19" Count="1" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="95" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="97" Count="0" />
+      <LineId Id="96" Count="0" />
+      <LineId Id="116" Count="2" />
+      <LineId Id="107" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="92" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="63" Count="1" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="119" Count="0" />
+      <LineId Id="65" Count="2" />
+      <LineId Id="105" Count="0" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="120" Count="0" />
+      <LineId Id="69" Count="3" />
+      <LineId Id="100" Count="0" />
+      <LineId Id="121" Count="0" />
+      <LineId Id="73" Count="2" />
+      <LineId Id="106" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="102" Count="0" />
+      <LineId Id="61" Count="1" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="159" Count="0" />
+      <LineId Id="161" Count="1" />
+      <LineId Id="160" Count="0" />
+      <LineId Id="48" Count="1" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="46" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

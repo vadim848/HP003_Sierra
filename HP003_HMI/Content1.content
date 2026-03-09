@@ -1,0 +1,5 @@
+<div id="Content1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1077" data-tchmi-height="654">
+
+<div id="UserControl1_2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="654" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/JigControl.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="1077" data-tchmi-width-unit="px">
+</div>
+</div>

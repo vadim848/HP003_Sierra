@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalVariables Crc="1291070828" Id="7e8ed2ed-5f21-495b-af4d-85e66bf34082" FileFormatVersion="1.0">
+  <Variable Id="ade09bb2-a891-4873-92da-8153dc26b2d8">
+    <Name>Run</Name>
+    <SourceUsages>
+      <AliasDeviceIoUsage Id="bce9e9dc-f3c4-433a-a618-3d4b1a2cadea">
+        <SdsId>2</SdsId>
+        <ChannelId>1</ChannelId>
+        <FunctionId>1131179973</FunctionId>
+      </AliasDeviceIoUsage>
+    </SourceUsages>
+    <TargetUsages>
+      <GroupPortUsage Id="f4106867-d958-4237-8c1f-6c1cab005c42">
+        <ModelElementId>e3ab2f14-ff96-4751-b3f6-76a765fae418</ModelElementId>
+      </GroupPortUsage>
+    </TargetUsages>
+  </Variable>
+  <Variable Id="df1149a7-2d5a-44cd-a815-435a0e2afe3f">
+    <Name>ErrorAck</Name>
+    <SourceUsages>
+      <AliasDeviceIoUsage Id="98e7addd-8be2-4e1a-b10e-394584118191">
+        <SdsId>1</SdsId>
+        <ChannelId>1</ChannelId>
+        <FunctionId>1131179973</FunctionId>
+      </AliasDeviceIoUsage>
+    </SourceUsages>
+    <TargetUsages>
+      <GroupPortUsage Id="6f0f2fb1-a2dc-421e-8080-d23aa981e9cf">
+        <ModelElementId>a16be37f-3393-450e-b8f2-2a78199bafe2</ModelElementId>
+      </GroupPortUsage>
+    </TargetUsages>
+  </Variable>
+  <Variable Id="faf65231-ce7a-4dae-89a0-39ddb1d65dd2">
+    <Name>EStopReset</Name>
+    <SourceUsages>
+      <AliasDeviceIoUsage Id="106894fa-db93-4c84-b79e-1e2b95d57dd5">
+        <SdsId>8</SdsId>
+        <ChannelId>1</ChannelId>
+        <FunctionId>1131179973</FunctionId>
+      </AliasDeviceIoUsage>
+    </SourceUsages>
+    <TargetUsages>
+      <FbPortUsage Id="e2bab55f-3509-4373-9285-71cc23c9b0de">
+        <ModelElementId>2e5443ff-7398-4c6e-96fe-bba6d46d54f4</ModelElementId>
+      </FbPortUsage>
+    </TargetUsages>
+  </Variable>
+</GlobalVariables>

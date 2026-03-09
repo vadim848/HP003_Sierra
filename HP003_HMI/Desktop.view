@@ -1,0 +1,6 @@
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height="100" data-tchmi-min-height-unit="%">
+  <div id="UserControl1_3" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="653" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/JigControl.usercontrol" data-tchmi-top="79" data-tchmi-top-unit="px" data-tchmi-width="1077" data-tchmi-width-unit="px">
+</div>
+<div id="UserControl1_5" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="78" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/TopMenu.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="1077" data-tchmi-width-unit="px">
+</div>
+</div>

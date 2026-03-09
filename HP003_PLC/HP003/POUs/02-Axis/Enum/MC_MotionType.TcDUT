@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="MC_MotionType" Id="{77f89c8a-d4fa-4f7c-a213-89bfe663aa55}">
+    <Declaration><![CDATA[TYPE MC_MotionType :(
+	eAbsolute	:=0,
+	eRelative	:=1);
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

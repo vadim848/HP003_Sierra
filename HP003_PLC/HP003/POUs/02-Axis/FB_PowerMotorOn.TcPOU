@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_PowerMotorOn" Id="{3b3ba6c5-43da-4ccc-8747-9027dd49f298}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PowerMotorOn
+VAR_INPUT
+	
+	bPowerOn			:BOOL;
+	bPowerOff			:BOOL;
+	bNegOn				:BOOL;
+	bPosOn				:BOOL;
+	pST_Axesfunctions 	:POINTER TO ARRAY[1..C_Max_AxesCount] OF ST_Axesfunctions;
+	pST_AX5kFunctions	:POINTER TO ARRAY[1..C_Max_AxesCount] OF ST_AX5kFunctions;
+	pAXIS_REF			:POINTER TO ARRAY[1..C_Max_AxesCount] OF AXIS_REF;
+	pArrIgnoreEnableList:POINTER TO ARRAY[1..C_Max_AxesCount] OF BOOL;
+	
+	
+END_VAR
+VAR_OUTPUT
+	Done				:BOOL;
+END_VAR
+VAR_IN_OUT
+	Execute				:BOOL;
+END_VAR
+
+VAR_TEMP
+	i: INT;
+	check: BOOL;
+END_VAR
+VAR
+	t1: TON;
+	t2: Ton;
+	p: INT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[t1(IN:=NOT t1.Q , PT:=T#1S , Q=> , ET=> );
+t2(PT:=T#0.5S , Q=> , ET=> );
+
+IF Execute THEN
+	Done:=FALSE;
+	t2(IN:=TRUE);
+	FOR	i:= 1 TO 2 DO//C_Max_AxesCount
+		IF NOT pArrIgnoreEnableList^[i] THEN			
+			pST_Axesfunctions^[i].bAxReleaseNeg:= bNegOn;
+			pST_Axesfunctions^[i].bAxReleasePos:= bPosOn;
+			pST_Axesfunctions^[i].bMcReset:=TRUE;
+			pST_AX5kFunctions^[i].bAxResetDrive:=TRUE;
+			IF bPowerOn AND NOT bPowerOff THEN;
+				IF prg_Call_Recipe_Slow.bAllRecipesLoaded THEN;
+					pST_Axesfunctions^[i].bMcPower:=TRUE;
+				ELSE;
+					//Skip until all recipes will loaded
+				END_IF
+				
+			ELSIF bPowerOff AND NOT bPowerOn THEN;
+				pST_Axesfunctions^[i].bMcPower:=FALSE;
+ 			ELSE;
+				fbPrintErrMessageByID(sModuleDescription:='VADIM',sActErrorID:='4568');
+			END_IF
+		END_IF
+	END_FOR
+	
+END_IF
+
+IF t2.Q THEN
+	//IF NOT done THEN
+		FOR	i:= 1 TO C_Max_AxesCount DO
+			IF NOT pArrIgnoreEnableList^[i] THEN
+				pST_Axesfunctions^[i].bMcReset:=FALSE;
+				pST_AX5kFunctions^[i].bAxResetDrive:=FALSE;
+			END_IF
+		END_FOR
+	//END_IF
+	t2(IN:=FALSE);
+END_IF
+
+IF t1.Q THEN
+	check:=TRUE;
+	FOR	i:= 1 TO C_Max_AxesCount DO
+		IF NOT pArrIgnoreEnableList^[i] THEN
+			IF NOT pAXIS_REF^[i].Status.Operational THEN
+				check:=FALSE;
+			END_IF
+		END_IF
+	END_FOR
+	Done:=check;
+END_IF
+Execute:=FALSE;
+bPowerOn:=FALSE;
+bPowerOff:=FALSE;
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_PowerMotorOn">
+      <LineId Id="11" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="248" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="141" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="93" Count="0" />
+      <LineId Id="177" Count="0" />
+      <LineId Id="243" Count="1" />
+      <LineId Id="246" Count="1" />
+      <LineId Id="245" Count="0" />
+      <LineId Id="181" Count="2" />
+      <LineId Id="178" Count="2" />
+      <LineId Id="143" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="255" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="107" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="109" Count="0" />
+      <LineId Id="112" Count="0" />
+      <LineId Id="144" Count="0" />
+      <LineId Id="113" Count="1" />
+      <LineId Id="145" Count="0" />
+      <LineId Id="110" Count="1" />
+      <LineId Id="213" Count="0" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="148" Count="0" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="146" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="68" Count="1" />
+      <LineId Id="147" Count="0" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="257" Count="1" />
+      <LineId Id="256" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

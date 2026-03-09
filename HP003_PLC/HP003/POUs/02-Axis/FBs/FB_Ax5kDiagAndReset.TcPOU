@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_Ax5kDiagAndReset" Id="{bbfb8b71-de5f-4873-93eb-693222c23e28}" SpecialFunc="None">
+    <Declaration><![CDATA[(* This Function_Block  perform drive(Ax5k) reset  and Diagnosic masseges *
+	Last updated :	21/04/2010 *)
+FUNCTION_BLOCK FB_Ax5kDiagAndReset
+VAR_INPUT
+	stAX5kFunctions		:	POINTER TO ST_AX5kFunctions;
+	AX5000_DriveRef		:	POINTER TO ST_PlcDriveRef;
+	stAxis				:	POINTER TO AXIS_REF;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	fbSoEReset		: FB_SoEReset;
+	fbDiagInfo		: FB_AX5000_DiagInfo;
+	Clock :TON;
+
+	LastOPAxisState		:BOOL;
+	AxisDiagInfoState:		INT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbSoEReset(		(*Reset the Drive *)
+	NetId:='' ,
+	Execute:=stAX5kFunctions^.bAxResetDrive ,
+	Timeout:=T#10s ,
+	Axis:= stAxis^,
+	Busy=>stAX5kFunctions^.DriveResetBusy ,
+	Error=>stAX5kFunctions^.DriveResetErr ,
+	AdsErrId=>stAX5kFunctions^.DriveResetAdsErrId  ,
+	SercosErrId=>stAX5kFunctions^.DriveResetSercosErrId );
+
+
+
+
+
+CASE AxisDiagInfoState OF
+
+	0: 	IF LastOPAxisState<>stAxis^.Status.Operational THEN
+			LastOPAxisState:=stAxis^.Status.Operational;
+			AxisDiagInfoState:=5;
+		END_IF
+
+	5:	fbDiagInfo.bStart:=TRUE;
+		IF fbDiagInfo.fbDiagMessage.bBusy THEN
+			AxisDiagInfoState:=10;
+		END_IF
+
+	10:	IF NOT  fbDiagInfo.fbDiagMessage.bBusy THEN
+			IF NOT  fbDiagInfo.fbDiagMessage.bError THEN
+				fbDiagInfo.bStart:=FALSE;
+				AxisDiagInfoState:=0;
+			ELSE
+				AxisDiagInfoState:=5;
+				fbDiagInfo.bStart:=FALSE;
+			END_IF
+		END_IF
+END_CASE
+
+
+fbDiagInfo(
+	stPlcDriveRef:=AX5000_DriveRef^ ,
+	bError=>stAX5kFunctions^.DiagInfobErr ,
+	stDiag=>stAX5kFunctions^.stDiagInfo );
+
+
+
+
+(*
+Clock(IN:=NOT Clock.Q , PT:=T#1s , Q=> , ET=> );
+
+Clock(IN:=stAxis^.Status.Operational , PT:=T#1s , Q=> , ET=> );
+fbDiagInfo(bStart:=Clock.Q,
+	stPlcDriveRef:=AX5000_DriveRef^ ,
+	bError=>stAX5kFunctions^.DiagInfobErr ,
+	stDiag=>stAX5kFunctions^.stDiagInfo );
+
+*)]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Ax5kDiagAndReset">
+      <LineId Id="18" Count="55" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
