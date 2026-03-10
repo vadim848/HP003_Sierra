@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="ST_Axesfunctions" Id="{5ac4a638-452c-4409-bc3d-50d247713993}">
+    <Declaration><![CDATA[TYPE ST_Axesfunctions :
+STRUCT
+	stStatus: ST_AxisStatus;
+	(* control variable *)
+	nOverride						:	UDINT := 100;
+	bAxisEnabled					:	BOOL;		(*External Input*)
+	bRefCam							:	BOOL;
+	bMcPower						:	BOOL;		
+	bMcReset						:	BOOL;		
+	bMcSetPosition					:	BOOL;
+	bMcHome							:	BOOL;
+	bMcHalt							:	BOOL;		
+	bMcStop							:	BOOL;		
+	bMcMoveAbs						:	BOOL;		
+	bMcMoveAbs2						:	BOOL;		
+	bMcMoveContinuousAbs			:	BOOL;
+	bMcMoveRel						:	BOOL;
+	bMcMoveVelo						:	BOOL;
+	bMcMoveModulo					:	BOOL;
+	bJogForward						:	BOOL;		
+	bJogBackward					:	BOOL;		
+	bAxReleasePos					:	BOOL;		
+	bAxReleaseNeg					:	BOOL;		
+	bAxReleaseRef					:	BOOL:=TRUE;
+	fPosition						:	LREAL;		
+	fPosition2						:	LREAL;		
+	Step							:	LREAL;
+	fVelocity						:	LREAL;		
+	fVelocity2						:	LREAL;		
+	fEndVelocity					:	LREAL;
+	fjogVelocity					:	LREAL;
+	fAcceleration					:	LREAL;		
+	fDeceleration					:	LREAL;		
+	fJerk							:	LREAL;		
+	PFB								:	LREAL;		
+	iDirection						:	MC_Direction := 1 ;
+	BufferMode						:	MC_BufferMode;
+	BufferMode2						:	MC_BufferMode;
+	HomingMode 						:	MC_HomingMode := MC_DefaultHoming;
+	JogMode							:	E_JogMode;
+	MoveOptions						:	ST_MoveOptions;
+	HomingOptions					:	ST_HomingOptions;
+	SetPositionOptions				:	ST_SetPositionOptions;
+	bSetNewPosRelFromActPos			:	BOOL := FALSE;
+	Status							:	BOOL;
+	fPreSetPos						:	LREAL := DEFAULT_HOME_POSITION;
+	StartCoupling					:	BOOL;
+	AxisMinVelo						: 	LREAL;
+	AxisMaxVelo						: 	LREAL;
+
+
+		(*Mobile panel paremeter*)
+	Mobile177fPosition				:	REAL;		
+	Mobile177fVelocity				:	REAL;		
+	Mobile177fjogVelocity			:	INT;			
+	Mobile177fAcceleration			:	REAL;		
+	Mobile177fDeceleration			:	REAL;		
+	Mobile177fJerk					:	REAL;		
+	Mobile177PFB					:	REAL;		
+	Mobile177JogMode				:	INT;			
+	Mobile177Step					:	REAL;		
+	Mobile177ConvertStep			:	INT;			
+
+	(* MC-FB Statuses *)
+	McPowerState					:	BOOL;		
+	McPowerBusy						:	BOOL;		
+	McPowerActive					:	BOOL;		
+	McPowerErr						:	BOOL;
+	McPowerErrId					:	UDINT;		
+
+	McResetDone						:	BOOL;		
+	McResetBusy						:	BOOL;		
+	McResetErr						:	BOOL;
+	McResetErrId					:	UDINT;		
+
+	McSetPositionDone				:	BOOL;
+	McSetPositionBusy				:	BOOL;
+	McSetPositionErr				:	BOOL;
+	McSetPositionErrId				:	UDINT;
+
+	McHaltDone						:	BOOL;
+	McHaltBusy						:	BOOL;
+	McHaltActive					:	BOOL;
+	McHaltCmdAborted				:	BOOL;
+	McHaltErr						:	BOOL;
+	McHaltErrId						:	UDINT;
+
+	McStopDone						:	BOOL;		
+	McStopBusy						:	BOOL;		
+	McStopActive					:	BOOL;		
+	McStopCmdAborted				:	BOOL;		
+	McStopErr						:	BOOL;		
+	McStopErrId						:	UDINT;		
+
+	McMoveAbsoluteDone				:	BOOL;		
+	McMoveAbsoluteBusy				:	BOOL;		
+	McMoveAbsoluteActive			:	BOOL;		
+	McMoveAbsoluteCmdAborted		:	BOOL;		
+	McMoveAbsoluteErr				:	BOOL;		
+	McMoveAbsoluteErrId				:	UDINT;		
+
+	McMoveAbsolute2Done				:	BOOL;		
+	McMoveAbsolute2Busy				:	BOOL;		
+	McMoveAbsolute2Active			:	BOOL;		
+	McMoveAbsolute2CmdAborted		:	BOOL;		
+	McMoveAbsolute2Err				:	BOOL;		
+	McMoveAbsolute2ErrId			:	UDINT;		
+
+	McMoveContinuousAbsoluteInEndVelocity	:	BOOL;
+	McMoveContinuousAbsoluteBusy			:	BOOL;
+	McMoveContinuousAbsoluteActive			:	BOOL;
+	McMoveContinuousAbsoluteCmdAborted		:	BOOL;
+	McMoveContinuousAbsoluteErr				:	BOOL;
+	McMoveContinuousAbsoluteErrId			:	UDINT;
+
+
+	McMoveRelativeDone					:	BOOL;
+	McMoveRelativeBusy					:	BOOL;
+	McMoveRelativeActive				:	BOOL;
+	McMoveRelativeCmdAborted			:	BOOL;
+	McMoveRelativeErr					:	BOOL;
+	McMoveRelativeErrId					:	UDINT;
+
+	McMoveVelocityInVelo				:	BOOL;
+	McMoveVelocityBusy					:	BOOL;
+	McMoveVelocityActive				:	BOOL;
+	McMoveVelocityCmdAborted			:	BOOL;
+	McMoveVelocityErr					:	BOOL;
+	McMoveVelocityErrId					:	UDINT;
+
+	McMoveModuloDone					:	BOOL;
+	McMoveModuloBusy					:	BOOL;
+	McMoveModuloActive					:	BOOL;
+	McMoveModuloCmdAborted				:	BOOL;
+	McMoveModuloErr						:	BOOL;
+	McMoveModuloErrId					:	UDINT;
+
+	McHomeDone							:	BOOL;
+	McHomeBusy							:	BOOL;
+	McHomeActive						:	BOOL;
+	McHomeCmdAborted					:	BOOL;
+	McHomeErr							:	BOOL;
+	McHomeErrId							:	UDINT;
+
+	McJogDone							:	BOOL;
+	McJogBusy							:	BOOL;
+	McJogCmdAborted						:	BOOL;
+	McJogErr							:	BOOL;
+	McJogErrId							:	UDINT;
+
+	McGearinBusy						:	BOOL;
+	McGearinActive						:	BOOL;
+	McGearinInGear						:	BOOL;
+	McGearinError						:	BOOL;
+	McGearinErrID						:	UDINT;
+
+	MC_GearOutDone						:	BOOL;
+	MC_GearOutBusy						:	BOOL;
+	MC_GearOutError						:	BOOL;
+	MC_GearOutErrId						:	UDINT;
+
+	SafeZone							:	BOOL;
+	DangerZone							:	BOOL;
+
+	InMoving 							:	BOOL;
+
+
+	NCMaxVeloRead								:	LREAL;
+	NCMaxVelo									:	LREAL;		
+	McReadMaxVeloValid							:	BOOL;
+	McReadMaxVeloValidFiltered					:	BOOL;
+	McReadMaxVeloBusy							:	BOOL;
+	McReadMaxVeloErr							:	BOOL;
+	McReadMaxVeloErrId							:	DWORD;
+
+	NCMinSoftLimitValueRead						:	LREAL;
+	NCMinSoftLimitValue							:	LREAL;		
+	McReadMinSoftLimitValueValid				:	BOOL;
+	McReadMinSoftLimitValueValidFiltered		:	BOOL;
+	McReadMinSoftLimitValueBusy					:	BOOL;
+	McReadMinSoftLimitValueErr					:	BOOL;
+	McReadMinSoftLimitValueErrId				:	DWORD;
+
+	NCPosSoftLimitValueRead						:	LREAL;
+	NCPosSoftLimitValue							:	LREAL;		
+	McReadPosSoftLimitValueValid				:	BOOL;
+	McReadPosSoftLimitValueValidFiltered		:	BOOL;
+	McReadPosSoftLimitValueBusy					:	BOOL;
+	McReadPosSoftLimitValueErr					:	BOOL;
+	McReadPosSoftLimitValueErrId				:	DWORD;
+
+	NCMotorInvertDirRead						:	BOOL;
+	NCMotorInvertDir							:	BOOL;		
+	McReadInvertMotorDirValid					:	BOOL;
+	McReadInvertMotorDirValidFiltered			:	BOOL;
+	McReadInvertMotorDirBusy					:	BOOL;
+	McReadInvertMotorDirErr						:	BOOL;
+	McReadInvertMotorDirErrId					:	DWORD;
+
+	ActVelo										:	LREAL;		
+
+
+	NCAccelerationDefaultValueRead				:	LREAL;
+	NCAccelerationDefaultValue					:	LREAL;		
+	McReadAccelerationDefaultValueValid			:	BOOL;
+	McReadAccelerationDefaultValueValidFiltered	:	BOOL;
+	McReadAccelerationDefaultValueBusy			:	BOOL;
+	McReadAccelerationDefaultValueErr			:	BOOL;
+	McReadAccelerationDefaultValueErrId			:	DWORD;
+
+	NCDecelerationDefaultValueRead				:	LREAL;
+	NCDecelerationDefaultValue					:	LREAL;		
+	McReadDecelerationDefaultValueValid			:	BOOL;
+	McReadDecelerationDefaultValueValidFiltered	:	BOOL;
+	McReadDecelerationDefaultValueBusy			:	BOOL;
+	McReadDecelerationDefaultValueErr			:	BOOL;
+	McReadDecelerationDefaultValueErrId			:	DWORD;
+
+	NCJerkDefaultValueRead						:	LREAL;
+	NCJerkDefaultValue							:	LREAL;
+	McReadJerkDefaultValueValid					:	BOOL;
+	McReadJerkDefaultValueValidFiltered			:	BOOL;
+	McReadJerkDefaultValueBusy					:	BOOL;
+	McReadJerkDefaultValueErr					:	BOOL;
+	McReadJerkDefaultValueErrId					:	DWORD;
+
+	ReadParametersInitialized					:	BOOL;
+	DriveReadParameterBusy						:	BOOL;
+
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

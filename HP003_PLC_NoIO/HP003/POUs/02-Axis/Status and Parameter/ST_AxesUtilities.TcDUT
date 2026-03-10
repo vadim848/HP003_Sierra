@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="ST_AxesUtilities" Id="{040bb1fd-7cb1-48d7-aef0-ab322d4f53df}">
+    <Declaration><![CDATA[TYPE ST_AxesUtilities :
+STRUCT
+	stSafeMovements		:ST_SafeMovements;
+	eDriveActive			:BOOL;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

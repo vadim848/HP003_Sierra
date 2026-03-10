@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FC_CurrentCalc" Id="{c773acf2-228e-4f48-b20a-672e6c5aac03}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION FC_CurrentCalc : REAL
+VAR_INPUT
+	AxesNo	: INT;
+	fDriveMaxPeakCurrent :REAL;	(* = IDN P-0-0092 / 1000 *)
+
+END_VAR
+VAR
+END_VAR
+
+
+
+
+(*kxhcjdc*)]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FC_CurrentCalc:=ABS((fDriveMaxPeakCurrent*INT_TO_REAL(stDriveIn[AxesNo].TorqueFeedbackIDN_S_84))/1000);]]></ST>
+    </Implementation>
+    <LineIds Name="FC_CurrentCalc">
+      <LineId Id="8" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

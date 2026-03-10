@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="E_AxisName" Id="{873cc522-612a-44b1-a95a-f34455dfa092}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_AxisName :
+(
+	eNotSelected := 0,ITM,IMP,PID,LatSkew
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

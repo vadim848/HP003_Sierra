@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="str_EL3314" Id="{477ea73b-ea07-4ef5-88b8-03892965a32f}">
+    <Declaration><![CDATA[TYPE str_EL3314 :
+STRUCT
+	channel_1	:	INT	;
+	channel_2	:	INT	;
+	channel_3	:	INT	;
+	channel_4	:	INT	;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

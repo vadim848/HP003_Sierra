@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GlobalTextList Name="GlobalTextList" Id="{fada926a-4b0b-4dff-92b0-2a6b2de6a6ce}">
+    <XmlArchive>
+      <Data>
+        <o xml:space="preserve" t="GlobalTextListObject">
+          <l n="TextList" t="ArrayList" cet="TextListRow">
+            <o>
+              <v n="TextID">"31"</v>
+              <v n="TextDefault">" "</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1034"</v>
+              <v n="TextDefault">"   Ax-Id: %d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2159"</v>
+              <v n="TextDefault">"   CL-Closed"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2093"</v>
+              <v n="TextDefault">"   Cont.Motion"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2086"</v>
+              <v n="TextDefault">"   Disabled"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2078"</v>
+              <v n="TextDefault">"   Disc.Motion"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2071"</v>
+              <v n="TextDefault">"   ErrorStop"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2166"</v>
+              <v n="TextDefault">"   HasJob"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2210"</v>
+              <v n="TextDefault">"   Homed"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2122"</v>
+              <v n="TextDefault">"   Homing"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2195"</v>
+              <v n="TextDefault">"   InPosArea"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2202"</v>
+              <v n="TextDefault">"   InTargetPos"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2188"</v>
+              <v n="TextDefault">"   McmdLocked"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2232"</v>
+              <v n="TextDefault">"   Moving"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2246"</v>
+              <v n="TextDefault">"   Neg-Dir"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2181"</v>
+              <v n="TextDefault">"   NewTargetPos"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2239"</v>
+              <v n="TextDefault">"   Not Moving"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2151"</v>
+              <v n="TextDefault">"   Operational"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2253"</v>
+              <v n="TextDefault">"   Pos-Dir"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2224"</v>
+              <v n="TextDefault">"   SL-Max"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2217"</v>
+              <v n="TextDefault">"   SL-Min"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2115"</v>
+              <v n="TextDefault">"   StandStill"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2100"</v>
+              <v n="TextDefault">"   Stopping"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2108"</v>
+              <v n="TextDefault">"   Sync.Motion"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1015"</v>
+              <v n="TextDefault">"  Acc:  %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1020"</v>
+              <v n="TextDefault">"  Dec:  %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2094"</v>
+              <v n="TextDefault">"  Dir: %d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3726"</v>
+              <v n="TextDefault">"  Dis:  %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1399"</v>
+              <v n="TextDefault">"  ErrId: 0x%X"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3578"</v>
+              <v n="TextDefault">"  H.Pos: %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2173"</v>
+              <v n="TextDefault">"  HasBeenStopped"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1026"</v>
+              <v n="TextDefault">"  Ist-Pos.:     %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1030"</v>
+              <v n="TextDefault">"  Ist-Velo:      %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1022"</v>
+              <v n="TextDefault">"  Jerk:  %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2884"</v>
+              <v n="TextDefault">"  Mode:  %d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1052"</v>
+              <v n="TextDefault">"  Oride:  %.1f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1046"</v>
+              <v n="TextDefault">"  Override: %d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1008"</v>
+              <v n="TextDefault">"  Pos:  %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1041"</v>
+              <v n="TextDefault">"  StateDWord:     0x%8.X"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1754"</v>
+              <v n="TextDefault">"  Step:  %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1012"</v>
+              <v n="TextDefault">"  Velo: %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2099"</v>
+              <v n="TextDefault">"  Velo: %f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2958"</v>
+              <v n="TextDefault">" Act Pos (%% X 10)=%d "</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1431"</v>
+              <v n="TextDefault">" Act:  %.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"926"</v>
+              <v n="TextDefault">" ADS ErrId: 0x%X"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"940"</v>
+              <v n="TextDefault">" Info: %s"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1048"</v>
+              <v n="TextDefault">" Max Velo:%.1f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2940"</v>
+              <v n="TextDefault">" Min Torque Value = 50"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1421"</v>
+              <v n="TextDefault">" Oride: %d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2921"</v>
+              <v n="TextDefault">" Req Neg(%%)=%d "</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2931"</v>
+              <v n="TextDefault">" Req Pos(%%)=%d "</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"932"</v>
+              <v n="TextDefault">" Sercos ErrId: 0x%X"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1553"</v>
+              <v n="TextDefault">"%.2f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1749"</v>
+              <v n="TextDefault">"%3.1f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"807"</v>
+              <v n="TextDefault">"%d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"950"</v>
+              <v n="TextDefault">"%s"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1415"</v>
+              <v n="TextDefault">"+"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1410"</v>
+              <v n="TextDefault">"-"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"945"</v>
+              <v n="TextDefault">"1"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"120"</v>
+              <v n="TextDefault">"10"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"121"</v>
+              <v n="TextDefault">"11"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"122"</v>
+              <v n="TextDefault">"12"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"123"</v>
+              <v n="TextDefault">"13"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"124"</v>
+              <v n="TextDefault">"14"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"125"</v>
+              <v n="TextDefault">"15"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"952"</v>
+              <v n="TextDefault">"2"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"960"</v>
+              <v n="TextDefault">"3"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"968"</v>
+              <v n="TextDefault">"4"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"976"</v>
+              <v n="TextDefault">"5"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"493"</v>
+              <v n="TextDefault">"6"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"492"</v>
+              <v n="TextDefault">"7"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"430"</v>
+              <v n="TextDefault">"8"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"119"</v>
+              <v n="TextDefault">"9"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2144"</v>
+              <v n="TextDefault">"Acc."</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1887"</v>
+              <v n="TextDefault">"Accel: %.1f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2949"</v>
+              <v n="TextDefault">"Act Neg (%% X 10)=%d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1390"</v>
+              <v n="TextDefault">"Active"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2821"</v>
+              <v n="TextDefault">"Axis Points"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2968"</v>
+              <v n="TextDefault">"Axis Status"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2875"</v>
+              <v n="TextDefault">"Backward"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1906"</v>
+              <v n="TextDefault">"BuferMode: %s"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1394"</v>
+              <v n="TextDefault">"Busy"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1000"</v>
+              <v n="TextDefault">"CmdAborted"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1920"</v>
+              <v n="TextDefault">"CommAborted"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2137"</v>
+              <v n="TextDefault">"ConstVelo"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"949"</v>
+              <v n="TextDefault">"Current: %.1f [Amp]"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2129"</v>
+              <v n="TextDefault">"Dec."</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1892"</v>
+              <v n="TextDefault">"Decel: %.1f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"6080"</v>
+              <v n="TextDefault">"Demand Position"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1901"</v>
+              <v n="TextDefault">"Direction: %s"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1417"</v>
+              <v n="TextDefault">"Done"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"935"</v>
+              <v n="TextDefault">"Drive - Info"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1407"</v>
+              <v n="TextDefault">"Enable"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"923"</v>
+              <v n="TextDefault">"Err"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"644"</v>
+              <v n="TextDefault">"Error"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1924"</v>
+              <v n="TextDefault">"ErrorID: %d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"997"</v>
+              <v n="TextDefault">"Execute"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1930"</v>
+              <v n="TextDefault">"FB MC-MoveModulo"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1709"</v>
+              <v n="TextDefault">"FB MC_MoveModuloRelative"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"938"</v>
+              <v n="TextDefault">"fb_Err"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"116"</v>
+              <v n="TextDefault">"Forward"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3138"</v>
+              <v n="TextDefault">"Halt"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"7356"</v>
+              <v n="TextDefault">"Home
+execute"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3143"</v>
+              <v n="TextDefault">"If halt active motion will resume
+after back to "Operation Play""</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"946"</v>
+              <v n="TextDefault">"Info"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3505"</v>
+              <v n="TextDefault">"InVelo"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1897"</v>
+              <v n="TextDefault">"Jerk: %.1f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1023"</v>
+              <v n="TextDefault">"M%d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1039"</v>
+              <v n="TextDefault">"MC - AxState"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1215"</v>
+              <v n="TextDefault">"MC - Halt"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3560"</v>
+              <v n="TextDefault">"MC - Home"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"918"</v>
+              <v n="TextDefault">"MC - Jog"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1004"</v>
+              <v n="TextDefault">"MC - MoveAbs"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"203"</v>
+              <v n="TextDefault">"MC - MoveAbs2"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2089"</v>
+              <v n="TextDefault">"MC - MoveModulo"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3717"</v>
+              <v n="TextDefault">"MC - MoveRel"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3497"</v>
+              <v n="TextDefault">"MC - MoveVelo"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2977"</v>
+              <v n="TextDefault">"MC - Power"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"915"</v>
+              <v n="TextDefault">"MC - Reset"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2912"</v>
+              <v n="TextDefault">"MC - Stop"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"921"</v>
+              <v n="TextDefault">"MC - Torque"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2903"</v>
+              <v n="TextDefault">"Mode:
+2= Cont.
+3=Steps"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1713"</v>
+              <v n="TextDefault">"ModuloActPos: %.3f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3234"</v>
+              <v n="TextDefault">"ModuloActTurns: %d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3242"</v>
+              <v n="TextDefault">"MotionType: %s"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3122"</v>
+              <v n="TextDefault">"Op"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3127"</v>
+              <v n="TextDefault">"Operational"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1915"</v>
+              <v n="TextDefault">"Options"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"418"</v>
+              <v n="TextDefault">"Position: %.1f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1700"</v>
+              <v n="TextDefault">"Position: %.3f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"2894"</v>
+              <v n="TextDefault">"ready"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3569"</v>
+              <v n="TextDefault">"RefCam"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"929"</v>
+              <v n="TextDefault">"Reset Drive"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3132"</v>
+              <v n="TextDefault">"Reset Error of
+Driver and MC"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1426"</v>
+              <v n="TextDefault">"Status"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1674"</v>
+              <v n="TextDefault">"Torque Limits "</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1910"</v>
+              <v n="TextDefault">"TYPE MC_BufferMode :
+ (
+	MC_Aborting		:= 16#00,
+	MC_Buffered		:= 16#01,
+	MC_BlendingLow		:= 16#12,
+	MC_BlendingPrevious	:= 16#13,
+	MC_BlendingNext		:= 16#14,
+	MC_BlendingHigh		:= 16#15
+ );
+END_TYPE"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1705"</v>
+              <v n="TextDefault">"TYPE MC_Direction :
+(
+	MC_Positive_Direction := 1,
+	MC_Shortest_Way ,
+	MC_Negative_Direction,
+	MC_Current_Direction
+);
+END_TYPE"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3250"</v>
+              <v n="TextDefault">"TYPE MC_MotionType :(
+	eAbsolute	:=0,
+	eRelative	:=1);
+END_TYPE"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"3393"</v>
+              <v n="TextDefault">"Up Side Home Position"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1883"</v>
+              <v n="TextDefault">"Velocity: %.1f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"943"</v>
+              <v n="TextDefault">"Warning"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"1927"</v>
+              <v n="TextDefault">"``"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+          </l>
+          <l n="Languages" t="ArrayList" />
+          <v n="GuidInit">{117a1557-17fe-4ba2-8b8d-cd98a433ebad}</v>
+          <v n="GuidReInit">{7cb5957d-5ef5-44be-8427-629cf2aa41fd}</v>
+          <v n="GuidExitX">{bf52647c-463a-462b-b3e6-5566df8dd45e}</v>
+        </o>
+      </Data>
+      <TypeList>
+        <Type n="ArrayList">System.Collections.ArrayList</Type>
+        <Type n="GlobalTextListObject">{63784cbb-9ba0-45e6-9d69-babf3f040511}</Type>
+        <Type n="Guid">System.Guid</Type>
+        <Type n="String">System.String</Type>
+        <Type n="TextListRow">{53da1be7-ad25-47c3-b0e8-e26286dad2e0}</Type>
+      </TypeList>
+    </XmlArchive>
+  </GlobalTextList>
+</TcPlcObject>

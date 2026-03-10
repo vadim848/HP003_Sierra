@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="MotorParams_typ" Id="{b967a814-4560-4d33-a1cc-9dd405613528}">
+    <Declaration><![CDATA[TYPE MotorParams_typ :
+STRUCT
+	parVelocity : REAL;
+	parAcc		: REAL;
+	parDecc		: REAL;
+	parHomePos	: REAL:= 0;
+	parHomeMode	: Tc2_MC2.MC_HomingMode;
+	parMovDirection	: REAL;
+	parJogVel	: REAL;
+	parJogAcc	: REAL;
+	parJogDec	: REAL;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

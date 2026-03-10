@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL_IO" Id="{db6c8deb-a77a-4346-9493-8284c97e20e2}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+
+VAR_GLOBAL
+	
+	//DI
+		arr_DI_1008	AT%I*:	str_EL1008 	;
+		arr_DI_2819	AT%I*:	str_EL2819	;
+	//DO
+		arr_DO_2819	AT%Q*:	str_EL2819	;	
+	//AI
+		arr_AI_3004	AT%I*:	str_EL3004	;
+		arr_AI_3152	AT%I*:	str_EL3152	;
+		arr_AI_3162	AT%I*:	str_EL3162	;
+		arr_AI_3114	AT%I*:	str_EL3314	;
+	//AO
+		arr_AO_4008	AT%Q*:	str_EL4008	;	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

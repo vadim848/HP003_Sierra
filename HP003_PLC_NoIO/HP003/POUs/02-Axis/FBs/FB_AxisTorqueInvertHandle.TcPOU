@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_AxisTorqueInvertHandle" Id="{dc0cdb4e-46a6-4f2a-ba41-6e817f278ba5}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AxisTorqueInvertHandle
+VAR_INPUT
+	Invert:BOOL;
+	InvertParValid:BOOL;
+	TorquePosReq:UINT;
+	TorqueNegReq:UINT;
+	MinTorqueValue:UINT;
+END_VAR
+VAR_OUTPUT
+	TorquePosOut:UINT;
+	TorqueNegOut:UINT;
+END_VAR
+VAR
+	TorquePosReqTemp:UINT;
+	TorqueNegReqTemp:UINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TorquePosReqTemp:=TorquePosReq*10;
+TorqueNegReqTemp:=TorqueNegReq*10;
+
+IF TorquePosReqTemp<(MinTorqueValue*10) THEN
+	TorquePosReqTemp:=(MinTorqueValue*10);
+END_IF
+
+IF TorqueNegReqTemp<(MinTorqueValue*10) THEN
+	TorqueNegReqTemp:=(MinTorqueValue*10);
+END_IF
+
+
+IF InvertParValid THEN
+	IF Invert THEN
+		TorquePosOut:=TorqueNegReqTemp;
+		TorqueNegOut:=TorquePosReqTemp;
+	ELSE
+		TorquePosOut:=TorquePosReqTemp;
+		TorqueNegOut:=TorqueNegReqTemp;
+	END_IF
+ELSE
+	TorquePosOut:=1000;
+	TorqueNegOut:=1000;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="FB_AxisTorqueInvertHandle">
+      <LineId Id="16" Count="23" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

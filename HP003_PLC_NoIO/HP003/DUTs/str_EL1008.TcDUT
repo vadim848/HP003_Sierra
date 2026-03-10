@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="str_EL1008" Id="{f8a147a2-4c31-4b6f-a302-4c1f937594ec}">
+    <Declaration><![CDATA[TYPE str_EL1008 :
+STRUCT
+	channel_1	:	BOOL	;
+	channel_2	:	BOOL	;
+	channel_3	:	BOOL	;
+	channel_4	:	BOOL	;
+	channel_5	:	BOOL	;
+	channel_6	:	BOOL	;
+	channel_7	:	BOOL	;
+	channel_8	:	BOOL	;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

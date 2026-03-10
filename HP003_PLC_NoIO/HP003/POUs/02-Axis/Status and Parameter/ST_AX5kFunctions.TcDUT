@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="ST_AX5kFunctions" Id="{d5be2c25-4e8f-4bdf-a66b-618aed40df19}">
+    <Declaration><![CDATA[TYPE ST_AX5kFunctions :
+STRUCT
+	bAxResetDrive					:	BOOL;
+
+
+	DriveResetBusy					:	BOOL;
+	DriveResetErr					:	BOOL;
+	DriveResetAdsErrId				:	UINT;
+	DriveResetSercosErrId				:	UINT;
+
+	stDiagInfo						:	ST_AX5000_DiagInfo;
+	DiagInfobErr						:	BOOL;
+
+	ReadDriveTempBusy				:	BOOL;
+	ReadDriveTempErr				:	BOOL;
+	ReadDriveTempADSErrId			:	UINT;
+	ReadDriveTempSercosErrId		:	UINT;
+	DriveTemp						:	REAL;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

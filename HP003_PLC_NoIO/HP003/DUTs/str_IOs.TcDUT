@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="str_IOs" Id="{4714830f-6b80-470f-b712-701f9ad42ab8}">
+    <Declaration><![CDATA[TYPE str_IOs :
+STRUCT
+	diIO	:	str_DI_IOs;
+	doIO	:   str_DO_IOs;
+	aiIO	:	str_AI_IOs;
+	aoIO	:   str_AO_IOs;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

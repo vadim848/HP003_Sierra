@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="ST_AX5000_DiagInfo" Id="{495d60ea-ad28-44bd-9b99-89e81cca5796}">
+    <Declaration><![CDATA[TYPE ST_AX5000_DiagInfo :
+STRUCT
+	udID			:	UDINT;
+	sMsg			:	STRING[160];
+	sDescription 	:	STRING[260];
+	sClass			:	STRING;
+	sReaction		:	STRING;
+	sType			:	STRING;
+	sReset			:	STRING[160];
+	sCause			:	STRING[160];
+	sRemedy			:	STRING[160];
+	bInfo			:	BOOL;
+	bWarning		:	BOOL;
+	bError			:	BOOL;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="MAIN" Id="{e275a364-5e77-4749-8ef4-faa0b25b4f67}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	IOs	  		: str_IOs;
+	axesFunc	: ST_Axesfunctions;
+	fb_ITM		: FB_Axisfunctions;
+	fb_PID		: FB_Axisfunctions;
+	fb_IMP		: FB_Axisfunctions;
+	fb_LatSkew	:	FB_Axisfunctions;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[act_IO_Mapping();
+fb_ITM(stAxFunctions:= ADR(axesFunc), stAxis := ADR(GVL_AXES.ax_ITM));
+fb_IMP(stAxFunctions:= ADR(axesFunc), stAxis := ADR(GVL_AXES.ax_IMP));
+fb_PID(stAxFunctions:= ADR(axesFunc), stAxis := ADR(GVL_AXES.ax_PID));
+fb_LatSkew(stAxFunctions:= ADR(axesFunc), stAxis := ADR(GVL_AXES.ax_LatSkew));
+]]></ST>
+    </Implementation>
+    <Action Name="act_IO_Mapping" Id="{f19eb3d6-e1bb-4dae-8594-c8b5644167c5}">
+      <Implementation>
+        <ST><![CDATA[//Inputs 
+IOs.aiIO.IrTempLeft 	:= GVL_IO.arr_AI_3004.channel_1;
+IOs.aiIO.IrTempCenter 	:= GVL_IO.arr_AI_3004.channel_2;
+IOs.aiIO.IrTempRight 	:= GVL_IO.arr_AI_3004.channel_3;
+
+IOs.aiIO.LateralSns		:= GVL_IO.arr_AI_3152.channel_1;
+
+//	BlanketRotation :	REAL;	?? Should be analog input or digital??
+//	BlanketSpeed	:	REAL;  ?? Should be analog input or digital??
+
+
+//Outputs
+//AO
+GVL_IO.arr_AO_4008.channel_1 := IOs.aoIO.t1FrontRegulator;
+GVL_IO.arr_AO_4008.channel_2 := IOs.aoIO.tensFrontRegulator;
+GVL_IO.arr_AO_4008.channel_3 := IOs.aoIO.t1RearRegulator;
+GVL_IO.arr_AO_4008.channel_4 := IOs.aoIO.tensRearRegulator;
+GVL_IO.arr_AO_4008.channel_5 := IOs.aoIO.t2FrontRegulator;
+GVL_IO.arr_AO_4008.channel_6 := IOs.aoIO.irLampCtrl;
+GVL_IO.arr_AO_4008.channel_7 := IOs.aoIO.t2RearRegulator;
+
+//DO
+GVL_IO.arr_DO_2819.channel_1 := IOs.doIO.t1FrontEngValve;
+GVL_IO.arr_DO_2819.channel_2 := IOs.doIO.t1FrontDisengValve;
+GVL_IO.arr_DO_2819.channel_3 := IOs.doIO.t1RearEngValve;
+GVL_IO.arr_DO_2819.channel_4 := IOs.doIO.t1RearDisengValve;
+GVL_IO.arr_DO_2819.channel_5 := IOs.doIO.t2FrontEngValve;
+GVL_IO.arr_DO_2819.channel_6 := IOs.doIO.t2FrontDisengValve;
+GVL_IO.arr_DO_2819.channel_7 := IOs.doIO.t2RearEngValve;
+GVL_IO.arr_DO_2819.channel_8 := IOs.doIO.t2RearDisengValve;
+GVL_IO.arr_DO_2819.channel_9 := IOs.doIO.tnsEngFrontValve;
+GVL_IO.arr_DO_2819.channel_10 := IOs.doIO.tnsDisengFrontValve;
+GVL_IO.arr_DO_2819.channel_11 := IOs.doIO.tnsEngRearValve;
+GVL_IO.arr_DO_2819.channel_12 := IOs.doIO.tnsDisengRearValve;
+GVL_IO.arr_DO_2819.channel_13 := IOs.doIO.irLampCtrlEnable;
+
+	]]></ST>
+      </Implementation>
+    </Action>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="15" Count="2" />
+      <LineId Id="14" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN.act_IO_Mapping">
+      <LineId Id="1" Count="0" />
+      <LineId Id="3" Count="0" />
+      <LineId Id="36" Count="1" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="4" Count="0" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="5" />
+      <LineId Id="14" Count="1" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="17" Count="1" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="28" Count="2" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="32" Count="2" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="16" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

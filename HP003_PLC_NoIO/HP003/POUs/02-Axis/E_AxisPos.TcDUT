@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="E_AxisPos" Id="{6b4259c9-89e0-4d36-8441-ca37105e2e39}">
+    <Declaration><![CDATA[TYPE E_AxisPos :(
+	eDone			:=0
+);
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

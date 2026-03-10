@@ -12,6 +12,14 @@ END_VAR
     <Action Name="act_IO_Mapping" Id="{f19eb3d6-e1bb-4dae-8594-c8b5644167c5}">
       <Implementation>
         <ST><![CDATA[//Inputs 
+IOs.aiIO.IrTempLeft 	:= GVL_IO.arr_AI_3004.channel_1;
+IOs.aiIO.IrTempCenter 	:= GVL_IO.arr_AI_3004.channel_2;
+IOs.aiIO.IrTempRight 	:= GVL_IO.arr_AI_3004.channel_3;
+
+IOs.aiIO.LateralSns		:= GVL_IO.arr_AI_3152.channel_1;
+
+//	BlanketRotation :	REAL;	?? Should be analog input or digital??
+//	BlanketSpeed	:	REAL;  ?? Should be analog input or digital??
 
 
 //Outputs
@@ -47,7 +55,15 @@ GVL_IO.arr_DO_2819.channel_13 := IOs.doIO.irLampCtrlEnable;
     </LineIds>
     <LineIds Name="MAIN.act_IO_Mapping">
       <LineId Id="1" Count="0" />
-      <LineId Id="3" Count="1" />
+      <LineId Id="3" Count="0" />
+      <LineId Id="36" Count="1" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="4" Count="0" />
       <LineId Id="2" Count="0" />
       <LineId Id="6" Count="0" />
       <LineId Id="5" Count="0" />
