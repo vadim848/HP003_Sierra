@@ -32,6 +32,13 @@
     <HmiInitial>14.3.617.1</HmiInitial>
     <HmiRecent>14.3.617.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
+    <HmiTmcFiles>[
+  {
+    "FileName": "HP003_PLC_NoIO\\HP003\\HP003.tmc",
+    "RootNamespace": "CX-A5A8DA",
+    "PlcName": null
+  }
+]</HmiTmcFiles>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="FB_Axisfunctions" Id="{45b6d61d-a987-4a2d-a6f5-93a9f5465846}" SpecialFunc="None">
     <Declaration><![CDATA[
 FUNCTION_BLOCK FB_Axisfunctions
 VAR_INPUT
-	stAxFunctions		:	POINTER TO ST_Axesfunctions;
+	stAxFunctions	:	POINTER TO ST_Axesfunctions;
 	stAxis			:	POINTER TO AXIS_REF;
 
 END_VAR

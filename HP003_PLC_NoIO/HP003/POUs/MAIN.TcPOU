@@ -10,6 +10,16 @@ VAR
 	fb_IMP		: FB_Axisfunctions;
 	fb_LatSkew	:	FB_Axisfunctions;
 	
+	//buttons for both activation/release front and rear
+	bGroupT1Act		: BOOL := FALSE;
+	bGroupT1Rel		: BOOL := FALSE;
+	bGroupT2Act 	: BOOL := FALSE;
+	bGroupT2Rel		: BOOL := FALSE;
+	bGroupTensAct 	: BOOL := FALSE;
+	bGroupTensRel	: BOOL := FALSE;
+	 
+	
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -58,6 +68,44 @@ GVL_IO.arr_DO_2819.channel_11 := IOs.doIO.tnsEngRearValve;
 GVL_IO.arr_DO_2819.channel_12 := IOs.doIO.tnsDisengRearValve;
 GVL_IO.arr_DO_2819.channel_13 := IOs.doIO.irLampCtrlEnable;
 
+IF bGroupT1Act THEN 
+	IOs.doIO.t1FrontEngValve	:= TRUE;
+	IOs.doIO.t1RearEngValve		:= TRUE;
+	IOs.doIO.t1FrontDisengValve	:= FALSE;
+	IOs.doIO.t1RearDisengValve  := FALSE;
+ELSIF bGroupT1Rel THEN
+	IOs.doIO.t1FrontEngValve	:= FALSE;
+	IOs.doIO.t1RearEngValve		:= FALSE;
+	IOs.doIO.t1FrontDisengValve	:= TRUE;
+	IOs.doIO.t1RearDisengValve  := TRUE;	
+
+END_IF
+
+IF bGroupT2Act THEN 
+	IOs.doIO.t2FrontEngValve	:= TRUE;
+	IOs.doIO.t2RearEngValve		:= TRUE;
+	IOs.doIO.t2FrontDisengValve	:= FALSE;
+	IOs.doIO.t2RearDisengValve  := FALSE;
+ELSIF bGroupT2Rel THEN
+	IOs.doIO.t2FrontEngValve	:= FALSE;
+	IOs.doIO.t2RearEngValve		:= FALSE;
+	IOs.doIO.t2FrontDisengValve	:= TRUE;
+	IOs.doIO.t2RearDisengValve  := TRUE;	
+
+END_IF
+
+IF bGroupTensAct THEN 
+	IOs.doIO.tnsEngRearValve	:= TRUE;
+	IOs.doIO.tnsEngFrontValve	:= TRUE;
+	IOs.doIO.tnsDisengFrontValve:= FALSE;
+	IOs.doIO.tnsDisengRearValve	:= FALSE;
+ELSIF bGroupTensRel THEN
+	IOs.doIO.tnsEngRearValve	:= FALSE;
+	IOs.doIO.tnsEngFrontValve	:= FALSE;
+	IOs.doIO.tnsDisengFrontValve:= TRUE;
+	IOs.doIO.tnsDisengRearValve	:= TRUE;
+
+END_IF
 	]]></ST>
       </Implementation>
     </Action>
@@ -93,6 +141,29 @@ GVL_IO.arr_DO_2819.channel_13 := IOs.doIO.irLampCtrlEnable;
       <LineId Id="35" Count="0" />
       <LineId Id="25" Count="0" />
       <LineId Id="16" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="68" Count="1" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="53" Count="2" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="109" Count="1" />
+      <LineId Id="77" Count="5" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="61" Count="3" />
+      <LineId Id="111" Count="1" />
+      <LineId Id="65" Count="2" />
+      <LineId Id="114" Count="0" />
+      <LineId Id="113" Count="0" />
+      <LineId Id="116" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="44" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

@@ -2747,7 +2747,7 @@ External Setpoint Generation:
 		</Motion>
 		<Plc>
 			<Project GUID="{596ECAB5-0B2F-4E7C-B383-C29045CC84ED}" Name="HP003" PrjFilePath="HP003\HP003.plcproj" TmcFilePath="HP003\HP003.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="HP003\HP003.tmc" TmcHash="{3EF8FAC1-B44F-785A-CE5B-46B0927C1695}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="HP003\HP003.tmc" TmcHash="{17057A7C-B79D-0CD0-5B72-613B4CF657A0}">
 					<Name>HP003 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -2798,11 +2798,11 @@ External Setpoint Generation:
 					<Vars VarGrpType="2" AreaNo="1">
 						<Name>PlcTask Outputs</Name>
 						<Var>
-							<Name>GVL_AXES.ax_ITM.PlcToNc</Name>
+							<Name>GVL_AXES.ax_IMP.PlcToNc</Name>
 							<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 						</Var>
 						<Var>
-							<Name>GVL_AXES.ax_IMP.PlcToNc</Name>
+							<Name>GVL_AXES.ax_ITM.PlcToNc</Name>
 							<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 						</Var>
 						<Var>

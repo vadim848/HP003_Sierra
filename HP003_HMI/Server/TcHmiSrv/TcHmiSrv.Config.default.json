@@ -503,7 +503,7 @@
             "USEMAPPING": true
         },
         "ADS.Config": {
-            "ACCESS": 0,
+            "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": false,
             "HIDDEN": true,
@@ -783,6 +783,396 @@
             "OPTIONS": {},
             "SCHEMA": {
                 "function": true
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aoIO.irLampCtrl": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aoIO::irLampCtrl",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 7
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aoIO.t1FrontRegulator": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aoIO::t1FrontRegulator",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aoIO.t1RearRegulator": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aoIO::t1RearRegulator",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aoIO.t2FrontRegulator": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aoIO::t2FrontRegulator",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 3
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aoIO.t2RearRegulator": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aoIO::t2RearRegulator",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 4
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aoIO.tensFrontRegulator": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aoIO::tensFrontRegulator",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 5
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aoIO.tensRearRegulator": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aoIO::tensRearRegulator",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "propertyOrder": 6
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.t1FrontDisengValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::t1FrontDisengValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.t1FrontEngValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::t1FrontEngValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.t1RearDisengValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::t1RearDisengValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 4
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.t1RearEngValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::t1RearEngValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 3
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.t2FrontDisengValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::t2FrontDisengValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 6
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.t2FrontEngValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::t2FrontEngValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 5
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.t2RearDisengValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::t2RearDisengValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 8
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.t2RearEngValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::t2RearEngValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 7
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.tnsDisengFrontValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::tnsDisengFrontValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 10
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.tnsDisengRearValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::tnsDisengRearValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 12
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.tnsEngFrontValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::tnsEngFrontValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 9
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.tnsEngRearValve": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::tnsEngRearValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 11
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.bGroupT1Act": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::bGroupT1Act",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "comment": "buttons for both activation/release front and rear"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.bGroupT1Rel": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::bGroupT1Rel",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.bGroupT2Act": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::bGroupT2Act",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.bGroupT2Rel": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::bGroupT2Rel",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.bGroupTensAct": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::bGroupTensAct",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.bGroupTensRel": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::bGroupTensRel",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
             },
             "USEMAPPING": true
         },
@@ -1151,6 +1541,57 @@
                 }
             },
             "USEMAPPING": true
+        },
+        "CX_A5A8DA.MAIN.IOs.doIO.irLampCtrlEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "TMC",
+            "DYNAMIC": true,
+            "MAPPING": "CX-A5A8DA::MAIN::IOs::doIO::irLampCtrlEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 13
+                    }
+                ]
+            },
+            "USEMAPPING": false
+        },
+        "CX_A5A8DA.MAIN.IOs.doIO.t1FrontDisengValve": {
+            "ACCESS": 3,
+            "DOMAIN": "TMC",
+            "DYNAMIC": true,
+            "MAPPING": "CX-A5A8DA::MAIN::IOs::doIO::t1FrontDisengValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": false
+        },
+        "CX_A5A8DA.MAIN.IOs.doIO.t1FrontEngValve": {
+            "ACCESS": 3,
+            "DOMAIN": "TMC",
+            "DYNAMIC": true,
+            "MAPPING": "CX-A5A8DA::MAIN::IOs::doIO::t1FrontEngValve",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": false
         },
         "ChangeUserSettings": {
             "ACCESS": 3,
@@ -3255,7 +3696,7 @@
             "USEMAPPING": true
         },
         "TcHmiSrv.Config": {
-            "ACCESS": 0,
+            "ACCESS": 3,
             "DOMAIN": "TcHmiSrv",
             "DYNAMIC": false,
             "HIDDEN": true,
@@ -3794,6 +4235,35 @@
                 "ADS.AdsSyncReadStateReq": 3,
                 "ADS.CheckLicense": 3,
                 "ADS.Diagnostics": 3,
+                "ADS.PLC1.MAIN.IOs.aoIO.irLampCtrl": 3,
+                "ADS.PLC1.MAIN.IOs.aoIO.t1FrontRegulator": 3,
+                "ADS.PLC1.MAIN.IOs.aoIO.t1RearRegulator": 3,
+                "ADS.PLC1.MAIN.IOs.aoIO.t2FrontRegulator": 3,
+                "ADS.PLC1.MAIN.IOs.aoIO.t2RearRegulator": 3,
+                "ADS.PLC1.MAIN.IOs.aoIO.tensFrontRegulator": 3,
+                "ADS.PLC1.MAIN.IOs.aoIO.tensRearRegulator": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.irLampCtrlEnable": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.t1FrontDisengValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.t1FrontEngValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.t1RearDisengValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.t1RearEngValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.t2FrontDisengValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.t2FrontEngValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.t2RearDisengValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.t2RearEngValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.tnsDisengFrontValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.tnsDisengRearValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.tnsEngFrontValve": 3,
+                "ADS.PLC1.MAIN.IOs.doIO.tnsEngRearValve": 3,
+                "ADS.PLC1.MAIN.bGroupT1Act": 3,
+                "ADS.PLC1.MAIN.bGroupT1Rel": 3,
+                "ADS.PLC1.MAIN.bGroupT2Act": 3,
+                "ADS.PLC1.MAIN.bGroupT2Rel": 3,
+                "ADS.PLC1.MAIN.bGroupTensAct": 3,
+                "ADS.PLC1.MAIN.bGroupTensRel": 3,
+                "CX_A5A8DA.MAIN.IOs.doIO.irLampCtrlEnable": 3,
+                "CX_A5A8DA.MAIN.IOs.doIO.t1FrontDisengValve": 3,
+                "CX_A5A8DA.MAIN.IOs.doIO.t1FrontEngValve": 3,
                 "ChangeUserSettings": 3,
                 "ConfirmAlarm": 3,
                 "CreateEvent": 3,

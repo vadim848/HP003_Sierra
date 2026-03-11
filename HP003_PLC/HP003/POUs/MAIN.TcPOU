@@ -3,11 +3,22 @@
   <POU Name="MAIN" Id="{e275a364-5e77-4749-8ef4-faa0b25b4f67}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	IOs	  : str_IOs;
+	IOs	  		: str_IOs;
+	axesFunc	: ST_Axesfunctions;
+	fb_ITM		: FB_Axisfunctions;
+	fb_PID		: FB_Axisfunctions;
+	fb_IMP		: FB_Axisfunctions;
+	fb_LatSkew	:	FB_Axisfunctions;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[act_IO_Mapping();]]></ST>
+      <ST><![CDATA[act_IO_Mapping();
+fb_ITM(stAxFunctions:= ADR(axesFunc), stAxis := ADR(GVL_AXES.ax_ITM));
+fb_IMP(stAxFunctions:= ADR(axesFunc), stAxis := ADR(GVL_AXES.ax_IMP));
+fb_PID(stAxFunctions:= ADR(axesFunc), stAxis := ADR(GVL_AXES.ax_PID));
+fb_LatSkew(stAxFunctions:= ADR(axesFunc), stAxis := ADR(GVL_AXES.ax_LatSkew));
+]]></ST>
     </Implementation>
     <Action Name="act_IO_Mapping" Id="{f19eb3d6-e1bb-4dae-8594-c8b5644167c5}">
       <Implementation>
@@ -52,6 +63,9 @@ GVL_IO.arr_DO_2819.channel_13 := IOs.doIO.irLampCtrlEnable;
     </Action>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="15" Count="2" />
+      <LineId Id="14" Count="0" />
     </LineIds>
     <LineIds Name="MAIN.act_IO_Mapping">
       <LineId Id="1" Count="0" />

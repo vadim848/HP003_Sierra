@@ -79,6 +79,9 @@
     <Compile Include="POUs\02-Axis\Enum\NC_AxisParameter.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\02-Axis\E_AxisName.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\02-Axis\E_AxisPos.TcDUT">
       <SubType>Code</SubType>
     </Compile>
