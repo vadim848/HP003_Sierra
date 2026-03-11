@@ -3,7 +3,8 @@
   <DUT Name="str_DI_IOs" Id="{e5fe6538-7385-4608-b323-b3010d3ae124}">
     <Declaration><![CDATA[TYPE str_DI_IOs :
 STRUCT
-	eStopBtn	:	BOOL;
+	eStopBtn_EC	:	BOOL;
+	eStopBtn_Jig:	BOOL;
 END_STRUCT
 END_TYPE
 ]]></Declaration>

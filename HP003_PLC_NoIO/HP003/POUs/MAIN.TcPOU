@@ -5,6 +5,7 @@
 VAR
 	IOs	  		: str_IOs;
 	axesFunc	: ST_Axesfunctions;
+	itmParams	: MotorParams_typ;
 	fb_ITM		: FB_Axisfunctions;
 	fb_PID		: FB_Axisfunctions;
 	fb_IMP		: FB_Axisfunctions;

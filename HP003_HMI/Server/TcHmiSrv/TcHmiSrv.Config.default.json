@@ -786,6 +786,74 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.MAIN.IOs.aiIO.IrTempLeft": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aiIO::IrTempLeft",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aiIO.IrTempRight": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aiIO::IrTempRight",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 3
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aiIO.LateralSns": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aiIO::LateralSns",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 4
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.aiIO.LateralSnsRaw": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::aiIO::LateralSnsRaw",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 5
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "ADS.PLC1.MAIN.IOs.aoIO.irLampCtrl": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -900,6 +968,23 @@
                     },
                     {
                         "propertyOrder": 6
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.IOs.doIO.irLampCtrlEnable": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::IOs::doIO::irLampCtrlEnable",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "propertyOrder": 13
                     }
                 ]
             },
@@ -1173,6 +1258,57 @@
             "MAPPING": "PLC1::MAIN::bGroupTensRel",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.itmParams.parAcc": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::itmParams::parAcc",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 2
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.itmParams.parDecc": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::itmParams::parDecc",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 3
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.MAIN.itmParams.parVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::itmParams::parVelocity",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -4235,6 +4371,10 @@
                 "ADS.AdsSyncReadStateReq": 3,
                 "ADS.CheckLicense": 3,
                 "ADS.Diagnostics": 3,
+                "ADS.PLC1.MAIN.IOs.aiIO.IrTempLeft": 3,
+                "ADS.PLC1.MAIN.IOs.aiIO.IrTempRight": 3,
+                "ADS.PLC1.MAIN.IOs.aiIO.LateralSns": 3,
+                "ADS.PLC1.MAIN.IOs.aiIO.LateralSnsRaw": 3,
                 "ADS.PLC1.MAIN.IOs.aoIO.irLampCtrl": 3,
                 "ADS.PLC1.MAIN.IOs.aoIO.t1FrontRegulator": 3,
                 "ADS.PLC1.MAIN.IOs.aoIO.t1RearRegulator": 3,
@@ -4261,6 +4401,9 @@
                 "ADS.PLC1.MAIN.bGroupT2Rel": 3,
                 "ADS.PLC1.MAIN.bGroupTensAct": 3,
                 "ADS.PLC1.MAIN.bGroupTensRel": 3,
+                "ADS.PLC1.MAIN.itmParams.parAcc": 3,
+                "ADS.PLC1.MAIN.itmParams.parDecc": 3,
+                "ADS.PLC1.MAIN.itmParams.parVelocity": 3,
                 "CX_A5A8DA.MAIN.IOs.doIO.irLampCtrlEnable": 3,
                 "CX_A5A8DA.MAIN.IOs.doIO.t1FrontDisengValve": 3,
                 "CX_A5A8DA.MAIN.IOs.doIO.t1FrontEngValve": 3,

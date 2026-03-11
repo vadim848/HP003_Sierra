@@ -72,7 +72,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%CX_A5A8DA.MAIN.IOs.doIO.irLampCtrlEnable%/s%",
+        "symbolExpression": "%s%ADS.PLC1.MAIN.IOs.doIO.irLampCtrlEnable%/s%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:general#/definitions/BOOL",
@@ -88,7 +88,7 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%CX_A5A8DA.MAIN.IOs.doIO.irLampCtrlEnable%/s%",
+        "symbolExpression": "%s%ADS.PLC1.MAIN.IOs.doIO.irLampCtrlEnable%/s%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:general#/definitions/BOOL",
@@ -101,7 +101,7 @@
 ]
 </script>
 </div>
-<div id="TcHmiNumericInput_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="185" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="69" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width="70" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="185" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="69" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.itmParams.parVelocity%/s%" data-tchmi-width="70" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -112,7 +112,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="335" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="69" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width="70" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="332" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="66" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.itmParams.parAcc%/s%" data-tchmi-width="70" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -123,7 +123,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="489" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="69" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width="70" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="489" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="69" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.itmParams.parDecc%/s%" data-tchmi-width="70" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1222,7 +1222,7 @@
 </div>
 <div id="TcHmiTextblock_52" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="893" data-tchmi-left-unit="px" data-tchmi-text="bar" data-tchmi-top="307" data-tchmi-top-unit="px" data-tchmi-width="73" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 </div>
-<div id="TcHmiNumericInput_30" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="860" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="343" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width="51" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_30" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="860" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="343" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.IOs.aiIO.IrTempLeft%/s%" data-tchmi-width="51" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1233,7 +1233,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_31" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="951" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="343" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width="51" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_31" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="951" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="343" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.IOs.aiIO.IrTempRight%/s%" data-tchmi-width="51" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1305,7 +1305,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_36" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="898" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="568" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width="110" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_36" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="898" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="568" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.IOs.aiIO.LateralSns%/s%" data-tchmi-width="110" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1316,7 +1316,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_37" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="898" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="609" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width="110" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_37" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="898" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="609" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.IOs.aiIO.LateralSnsRaw%/s%" data-tchmi-width="110" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
