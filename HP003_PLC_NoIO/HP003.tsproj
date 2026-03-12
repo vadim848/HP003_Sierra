@@ -1720,7 +1720,7 @@ External Setpoint Generation:
 		<System>
 			<Settings MaxCpus="8"/>
 			<Tasks>
-				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+				<Task Id="3" Priority="20" CycleTime="2000000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
 			</Tasks>
@@ -1750,8 +1750,7 @@ External Setpoint Generation:
 						<Velo RefSearch="65.75466" RefSync="65.75466" SlowManual="328.7733" FastManual="1972.6398" Fast="6575.466" Maximum="6575.47"/>
 						<OtherSettings AllowMotionCmdToSlave="true"/>
 					</AxisPara>
-					<Encoder Name="Enc" EncType="19">
-						<EncPara MaxCount="#xffffffff"/>
+					<Encoder Name="Enc" EncType="1">
 						<Vars VarGrpType="1">
 							<Name>Inputs</Name>
 							<Var>
@@ -1808,8 +1807,8 @@ External Setpoint Generation:
 							</Var>
 						</Vars>
 					</Encoder>
-					<Drive Name="Drive" DrvType="16">
-						<DrvPara MaxCount="#xffffffff">
+					<Drive Name="Drive" DrvType="5">
+						<DrvPara>
 							<Analog VeloReferenz="7233.0126" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 							<TimeComp TaskDelayCycles="1"/>
 						</DrvPara>
@@ -1848,6 +1847,22 @@ External Setpoint Generation:
 								</SubVar>
 								<SubVar TypeFormatIndex="2">
 									<Name>nDataOut2</Name>
+								</SubVar>
+								<SubVar>
+									<Name>nCtrl2</Name>
+									<Comment><![CDATA[Digital Outputs Setpoint Generator:
+0x41 (0100 0001) = Minus (0x42 for inverse motor polarity)
+0x42 (0100 0010) = Plus (0x41 for inverse motor polarity)
+0x80 (1000 0000) = Stop
+]]></Comment>
+								</SubVar>
+								<SubVar>
+									<Name>nCtrl3</Name>
+									<Comment><![CDATA[Digital Outputs (Setpoint Generator + Position Controller):
+0x41 (0100 0001) = Minus (0x42 for inverse motor polarity)
+0x42 (0100 0010) = Plus (0x41 for inverse motor polarity)
+0x80 (1000 0000) = Stop
+]]></Comment>
 								</SubVar>
 								<SubVar TypeFormatIndex="2">
 									<Name>nDataOut3</Name>
@@ -1893,8 +1908,7 @@ External Setpoint Generation:
 						<Velo RefSearch="65.75466" RefSync="65.75466" SlowManual="328.7733" FastManual="1972.6398" Fast="6575.466" Maximum="6575.47"/>
 						<OtherSettings AllowMotionCmdToSlave="true"/>
 					</AxisPara>
-					<Encoder Name="Enc" EncType="19">
-						<EncPara MaxCount="#xffffffff"/>
+					<Encoder Name="Enc" EncType="1">
 						<Vars VarGrpType="1">
 							<Name>Inputs</Name>
 							<Var>
@@ -1951,8 +1965,8 @@ External Setpoint Generation:
 							</Var>
 						</Vars>
 					</Encoder>
-					<Drive Name="Drive" DrvType="16">
-						<DrvPara MaxCount="#xffffffff">
+					<Drive Name="Drive" DrvType="5">
+						<DrvPara>
 							<Analog VeloReferenz="7233.0126" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 							<TimeComp TaskDelayCycles="1"/>
 						</DrvPara>
@@ -1991,6 +2005,22 @@ External Setpoint Generation:
 								</SubVar>
 								<SubVar TypeFormatIndex="2">
 									<Name>nDataOut2</Name>
+								</SubVar>
+								<SubVar>
+									<Name>nCtrl2</Name>
+									<Comment><![CDATA[Digital Outputs Setpoint Generator:
+0x41 (0100 0001) = Minus (0x42 for inverse motor polarity)
+0x42 (0100 0010) = Plus (0x41 for inverse motor polarity)
+0x80 (1000 0000) = Stop
+]]></Comment>
+								</SubVar>
+								<SubVar>
+									<Name>nCtrl3</Name>
+									<Comment><![CDATA[Digital Outputs (Setpoint Generator + Position Controller):
+0x41 (0100 0001) = Minus (0x42 for inverse motor polarity)
+0x42 (0100 0010) = Plus (0x41 for inverse motor polarity)
+0x80 (1000 0000) = Stop
+]]></Comment>
 								</SubVar>
 								<SubVar TypeFormatIndex="2">
 									<Name>nDataOut3</Name>
@@ -2036,8 +2066,7 @@ External Setpoint Generation:
 						<Velo RefSearch="65.75466" RefSync="65.75466" SlowManual="328.7733" FastManual="1972.6398" Fast="6575.466" Maximum="6575.47"/>
 						<OtherSettings AllowMotionCmdToSlave="true"/>
 					</AxisPara>
-					<Encoder Name="Enc" EncType="19">
-						<EncPara MaxCount="#xffffffff"/>
+					<Encoder Name="Enc" EncType="1">
 						<Vars VarGrpType="1">
 							<Name>Inputs</Name>
 							<Var>
@@ -2094,8 +2123,8 @@ External Setpoint Generation:
 							</Var>
 						</Vars>
 					</Encoder>
-					<Drive Name="Drive" DrvType="16">
-						<DrvPara MaxCount="#xffffffff">
+					<Drive Name="Drive" DrvType="5">
+						<DrvPara>
 							<Analog VeloReferenz="7233.0126" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 							<TimeComp TaskDelayCycles="1"/>
 						</DrvPara>
@@ -2134,6 +2163,22 @@ External Setpoint Generation:
 								</SubVar>
 								<SubVar TypeFormatIndex="2">
 									<Name>nDataOut2</Name>
+								</SubVar>
+								<SubVar>
+									<Name>nCtrl2</Name>
+									<Comment><![CDATA[Digital Outputs Setpoint Generator:
+0x41 (0100 0001) = Minus (0x42 for inverse motor polarity)
+0x42 (0100 0010) = Plus (0x41 for inverse motor polarity)
+0x80 (1000 0000) = Stop
+]]></Comment>
+								</SubVar>
+								<SubVar>
+									<Name>nCtrl3</Name>
+									<Comment><![CDATA[Digital Outputs (Setpoint Generator + Position Controller):
+0x41 (0100 0001) = Minus (0x42 for inverse motor polarity)
+0x42 (0100 0010) = Plus (0x41 for inverse motor polarity)
+0x80 (1000 0000) = Stop
+]]></Comment>
 								</SubVar>
 								<SubVar TypeFormatIndex="2">
 									<Name>nDataOut3</Name>
@@ -2178,8 +2223,7 @@ External Setpoint Generation:
 						<Velo SlowManual="609" FastManual="2436" Maximum="6096"/>
 						<OtherSettings AllowMotionCmdToSlave="true"/>
 					</AxisPara>
-					<Encoder Name="Enc" EncType="4">
-						<EncPara MaxCount="#x0000ffff"/>
+					<Encoder Name="Enc" EncType="1">
 						<Vars VarGrpType="1">
 							<Name>Inputs</Name>
 							<Var>
@@ -2236,7 +2280,7 @@ External Setpoint Generation:
 							</Var>
 						</Vars>
 					</Encoder>
-					<Drive Name="Drive" DrvType="24">
+					<Drive Name="Drive" DrvType="5">
 						<DrvPara>
 							<Analog VeloReferenz="6096" TorqueSetpointScale="10" ScaleFactorActTorque="0.1"/>
 							<TimeComp TaskDelayCycles="1"/>
@@ -2333,7 +2377,7 @@ External Setpoint Generation:
 		</Motion>
 		<Plc>
 			<Project GUID="{596ECAB5-0B2F-4E7C-B383-C29045CC84ED}" Name="HP003" PrjFilePath="HP003\HP003.plcproj" TmcFilePath="HP003\HP003.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="HP003\HP003.tmc" TmcHash="{694D39AD-4200-EC5A-75D9-B33454913937}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="HP003\HP003.tmc" TmcHash="{1B2E824F-B960-E295-A258-4F2B5AEB41EC}">
 					<Name>HP003 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -2418,7 +2462,7 @@ External Setpoint Generation:
 								<OTCID>#x02010030</OTCID>
 							</ManualConfig>
 							<Priority>20</Priority>
-							<CycleTime>10000000</CycleTime>
+							<CycleTime>200000000</CycleTime>
 						</Context>
 					</Contexts>
 					<TaskPouOids>
@@ -2444,27 +2488,5 @@ External Setpoint Generation:
 				</Instance>
 			</Project>
 		</Safety>
-		<Io/>
 	</Project>
-	<Mappings>
-		<MappingInfo Identifier="{05000010-2001-0850-1000-040300205008}" Id="#x02030010" Watchdog="14000000040000000400000004000000"/>
-		<OwnerA Name="TIPC^HP003^HP003 Instance">
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^IMP">
-				<Link VarA="PlcTask Inputs^GVL_AXES.ax_IMP.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^GVL_AXES.ax_IMP.PlcToNc" VarB="Inputs^FromPlc"/>
-			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^ITM">
-				<Link VarA="PlcTask Inputs^GVL_AXES.ax_ITM.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^GVL_AXES.ax_ITM.PlcToNc" VarB="Inputs^FromPlc"/>
-			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^LatSkew">
-				<Link VarA="PlcTask Inputs^GVL_AXES.ax_LatSkew.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^GVL_AXES.ax_LatSkew.PlcToNc" VarB="Inputs^FromPlc"/>
-			</OwnerB>
-			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^PID">
-				<Link VarA="PlcTask Inputs^GVL_AXES.ax_PID.NcToPlc" VarB="Outputs^ToPlc"/>
-				<Link VarA="PlcTask Outputs^GVL_AXES.ax_PID.PlcToNc" VarB="Inputs^FromPlc"/>
-			</OwnerB>
-		</OwnerA>
-	</Mappings>
 </TcSmProject>

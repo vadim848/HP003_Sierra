@@ -3,13 +3,17 @@
   <DUT Name="MotorParams_typ" Id="{b967a814-4560-4d33-a1cc-9dd405613528}">
     <Declaration><![CDATA[TYPE MotorParams_typ :
 STRUCT
-	parVelocity : REAL:= 763;
+	parITMVelocity : REAL:= 763;
+	parIMPVelocity : REAL;
+	parPIDVelocity : REAL; 
+	parIMPVelPrcnt : REAL:= 0;
+	parPIDVelPrcnt : REAL:= 0;
 	parAcc		: REAL:= 1526;
 	parDecc		: REAL:= 1526;
 	parEstopDec	: REAL:= 9156;
 	parJerk		: REAL:= 100000;
 	parHomePos	: REAL:= 0;
-	parHomeMode	: Tc2_MC2.MC_HomingMode;
+	//parHomeMode	: MC_HomingMode.MC_Direct;
 	parMovDirectionCW	: BOOL:= TRUE;
 	
 	

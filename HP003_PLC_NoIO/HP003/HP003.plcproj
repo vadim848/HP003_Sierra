@@ -297,7 +297,6 @@
     <Folder Include="POUs\02-Axis\Enum" />
     <Folder Include="POUs\02-Axis\FBs" />
     <Folder Include="POUs\02-Axis\Functions" />
-    <Folder Include="POUs\02-Axis\OLD" />
     <Folder Include="POUs\02-Axis\Status and Parameter" />
     <Folder Include="POUs\02-Axis\Utilities" />
     <Folder Include="POUs\02-Axis\VISUs" />
