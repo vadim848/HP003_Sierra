@@ -8,7 +8,7 @@
 </script>
 <div id="TcHmiImage_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="58" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-src="Images/tc_logo.png" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="142" data-tchmi-width-unit="px">
 </div>
-<div id="TcHmiButton_26" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="58" data-tchmi-height-unit="px" data-tchmi-left="732" data-tchmi-left-unit="px" data-tchmi-text="Button" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+<div id="TcHmiButton_26" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="58" data-tchmi-height-unit="px" data-tchmi-left="732" data-tchmi-left-unit="px" data-tchmi-text="Main Control" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="19" data-tchmi-text-font-size-unit="px" data-tchmi-text-font-weight="Bold">
 
 
 
@@ -18,7 +18,7 @@
 
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
-  "color": "rgba(105, 47, 237, 1)"
+  "color": "rgba(91, 239, 197, 1)"
 }
 </script>
 
@@ -31,17 +31,17 @@
 }
 </script>
 </div>
-<div id="TcHmiButton_27" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="58" data-tchmi-height-unit="px" data-tchmi-left="847" data-tchmi-left-unit="px" data-tchmi-text="Button" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+<div id="TcHmiButton_27" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="58" data-tchmi-height-unit="px" data-tchmi-left="847" data-tchmi-left-unit="px" data-tchmi-text="Axis Control" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="19" data-tchmi-text-font-weight="Bold">
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
-  "color": "rgba(105, 47, 237, 1)"
+  "color": "rgba(91, 239, 197, 1)"
 }
 </script>
 </div>
-<div id="TcHmiButton_28" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="58" data-tchmi-height-unit="px" data-tchmi-left="962" data-tchmi-left-unit="px" data-tchmi-text="Button" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True">
+<div id="TcHmiButton_28" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="58" data-tchmi-height-unit="px" data-tchmi-left="962" data-tchmi-left-unit="px" data-tchmi-text="Scope" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="19" data-tchmi-text-font-weight="Bold">
 <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
 {
-  "color": "rgba(105, 47, 237, 1)"
+  "color": "rgba(91, 239, 197, 1)"
 }
 </script>
 </div>

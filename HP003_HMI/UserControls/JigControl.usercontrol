@@ -134,7 +134,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="150" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="110" data-tchmi-top-unit="px" data-tchmi-width="40" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="150" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="110" data-tchmi-top-unit="px" data-tchmi-width="40" data-tchmi-width-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.jigParams.parPIDVelPrcnt%/s%">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -155,8 +155,9 @@
         "active": true,
         "symbolExpression": "%s%ADS.PLC1.MAIN.jigParams.parPIDVelPrcnt%/s%",
         "value": {
-          "objectType": "FunctionExpression",
-          "functionExpression": "[Event Data] : : Value"
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctx%owner::Value%/ctx%"
         },
         "asyncWait": true
       }
@@ -187,7 +188,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_7" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="150" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="151" data-tchmi-top-unit="px" data-tchmi-width="40" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_7" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="150" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="151" data-tchmi-top-unit="px" data-tchmi-width="40" data-tchmi-width-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.jigParams.parIMPVelPrcnt%/s%">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -208,9 +209,9 @@
         "active": true,
         "symbolExpression": "%s%ADS.PLC1.MAIN.jigParams.parIMPVelPrcnt%/s%",
         "value": {
-          "objectType": "StaticValue",
+          "objectType": "Symbol",
           "valueType": "tchmi:general#/definitions/REAL",
-          "value": null
+          "symbolExpression": "%ctx%owner::Value%/ctx%"
         },
         "asyncWait": true
       }
@@ -1380,7 +1381,7 @@
 </div>
 <div id="TcHmiTextblock_62" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="838" data-tchmi-left-unit="px" data-tchmi-text="D" data-tchmi-top="527" data-tchmi-top-unit="px" data-tchmi-width="73" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 </div>
-<div id="TcHmiNumericInput_38" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="213" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="110" data-tchmi-top-unit="px" data-tchmi-width="53" data-tchmi-width-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.jigParams.parPIDVelocity%/s%">
+<div id="TcHmiNumericInput_38" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="213" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="110" data-tchmi-top-unit="px" data-tchmi-width="53" data-tchmi-width-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.jigParams.parPIDVelocity|BindingMode=TwoWay%/s%">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -1391,7 +1392,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_39" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="213" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="151" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.jigParams.parIMPVelocity%/s%" data-tchmi-width="53" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_39" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="31" data-tchmi-height-unit="px" data-tchmi-left="213" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="151" data-tchmi-top-unit="px" data-tchmi-value="%s%ADS.PLC1.MAIN.jigParams.parIMPVelocity|BindingMode=TwoWay%/s%" data-tchmi-width="53" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
