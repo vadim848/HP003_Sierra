@@ -1424,19 +1424,19 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{1C2C26E8-7F0D-3366-B27F-A3F5BD7679AE}" AutoDeleteType="true">str_EL3162</Name>
-			<BitSize>16</BitSize>
+			<Name GUID="{3585D0B2-8A26-A42A-A484-410C854924F3}" AutoDeleteType="true">str_EL3152</Name>
+			<BitSize>32</BitSize>
 			<SubItem>
 				<Name>channel_1</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
 				<BitOffs>0</BitOffs>
 			</SubItem>
 			<SubItem>
 				<Name>channel_2</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>8</BitOffs>
+				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
 			</SubItem>
 		</DataType>
 		<DataType>
@@ -1620,19 +1620,19 @@ External Setpoint Generation:
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{3585D0B2-8A26-A42A-A484-410C854924F3}" AutoDeleteType="true">str_EL3152</Name>
-			<BitSize>32</BitSize>
+			<Name GUID="{1C2C26E8-7F0D-3366-B27F-A3F5BD7679AE}" AutoDeleteType="true">str_EL3162</Name>
+			<BitSize>16</BitSize>
 			<SubItem>
 				<Name>channel_1</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
-				<BitSize>16</BitSize>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
 				<BitOffs>0</BitOffs>
 			</SubItem>
 			<SubItem>
 				<Name>channel_2</Name>
-				<Type GUID="{18071995-0000-0000-0000-000000000006}">INT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>16</BitOffs>
+				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
 			</SubItem>
 		</DataType>
 		<DataType>
@@ -2377,14 +2377,14 @@ External Setpoint Generation:
 		</Motion>
 		<Plc>
 			<Project GUID="{596ECAB5-0B2F-4E7C-B383-C29045CC84ED}" Name="HP003" PrjFilePath="HP003\HP003.plcproj" TmcFilePath="HP003\HP003.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="HP003\HP003.tmc" TmcHash="{B9965A8B-A8FD-879B-698A-EC23D60F63F7}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="HP003\HP003.tmc" TmcHash="{B7D1F7DC-C80F-A085-0521-11BF3133C5A9}">
 					<Name>HP003 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>GVL_IO.arr_AI_3162</Name>
-							<Type GUID="{1C2C26E8-7F0D-3366-B27F-A3F5BD7679AE}">str_EL3162</Type>
+							<Name>GVL_IO.arr_AI_3152</Name>
+							<Type GUID="{3585D0B2-8A26-A42A-A484-410C854924F3}">str_EL3152</Type>
 						</Var>
 						<Var>
 							<Name>GVL_AXES.ax_ITM.NcToPlc</Name>
@@ -2417,8 +2417,8 @@ External Setpoint Generation:
 							<Type GUID="{FE55E545-045C-8316-B5BD-AB5B413A9580}">str_EL3004</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.arr_AI_3152</Name>
-							<Type GUID="{3585D0B2-8A26-A42A-A484-410C854924F3}">str_EL3152</Type>
+							<Name>GVL_IO.arr_AI_3162</Name>
+							<Type GUID="{1C2C26E8-7F0D-3366-B27F-A3F5BD7679AE}">str_EL3162</Type>
 						</Var>
 						<Var>
 							<Name>GVL_IO.arr_AI_3114</Name>
