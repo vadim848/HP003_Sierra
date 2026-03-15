@@ -45,4 +45,19 @@
 }
 </script>
 </div>
+<div id="TcHmiStateImage_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiStateImage" data-tchmi-height="64" data-tchmi-height-unit="px" data-tchmi-left="172" data-tchmi-left-unit="px" data-tchmi-top="6" data-tchmi-top-unit="px" data-tchmi-width="64" data-tchmi-width-unit="px" data-tchmi-state="%s%ADS.PLC1.MAIN.IOs.diIO.eStopBtn_EC%/s%">
+
+<script data-tchmi-target-attribute="data-tchmi-state-list" type="application/json">
+[
+  {
+    "state": false,
+    "stateIcon": "Imports/Images/ems_released.png"
+  },
+  {
+    "state": true,
+    "stateIcon": "Imports/Images/ems_pressed.png"
+  }
+]
+</script>
+</div>
 </div>

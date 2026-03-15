@@ -137,7 +137,10 @@
     <Content Include="Content1.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Images\tc_logo.png">
+    <Content Include="Imports\Images\ems_pressed.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Imports\Images\ems_released.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UserControls\JigControl.usercontrol">
@@ -162,8 +165,6 @@
       <DependentUpon>UserControls\TopMenu.usercontrol</DependentUpon>
     </Content>
     <Folder Include="Fonts\" />
-    <Folder Include="Images" />
-    <Folder Include="Images\Manifest" />
     <Folder Include="Imports" />
     <Folder Include="Imports\Images" />
     <Folder Include="Imports\Videos" />
@@ -322,38 +323,6 @@
       <Visible>true</Visible>
     </Content>
     <Content Include="KeyboardLayouts\Numpad (plusminus).keyboard.json">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Favicon.ico">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Beckhoff_Logo.svg">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-0-75x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-1-5x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-1x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-2x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-3x.png">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Images\Manifest\launcher-icon-4x.png">
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>

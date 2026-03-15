@@ -25,6 +25,11 @@ VAR
 	bITMStart		: BOOL;	
 	bIMPStart		: BOOL;
 	bPIDStart		: BOOL;
+	bITMStop		: BOOL;	
+	bIMPStop		: BOOL;
+	bPIDStop		: BOOL;
+	bNextStep		: BOOL;
+	errStr			: STRING;
 	
 	itmState		: INT;
 	impState		: INT;
@@ -33,12 +38,14 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[act_IO_Mapping();
+act_StateMachineSFC();
+
 fb_ITM(stAxFunctions:= ADR(itmAxFunc), stAxis := ADR(GVL_AXES.ax_ITM));
 fb_IMP(stAxFunctions:= ADR(impAxFunc), stAxis := ADR(GVL_AXES.ax_IMP));
 fb_PID(stAxFunctions:= ADR(pidAxFunc), stAxis := ADR(GVL_AXES.ax_PID));
 fb_LatSkew(stAxFunctions:= ADR(latAxFunc), stAxis := ADR(GVL_AXES.ax_LatSkew));
 
-act_StateMachineSFC();]]></ST>
+]]></ST>
     </Implementation>
     <Action Name="_aHoming_active" Id="{66b5584a-5b9e-48d9-8709-40c4b246a144}">
       <Implementation>
@@ -61,9 +68,33 @@ itmAxFunc.bMcHome 		:= TRUE;]]></ST>
     </Action>
     <Action Name="_aInit_active" Id="{237d82c0-ffab-4771-af16-978dfcc58b6e}">
       <Implementation>
-        <ST><![CDATA[itmAxFunc.bAxisEnabled	:= FALSE; 
+        <ST><![CDATA[bNextStep				:= FALSE;
+itmAxFunc.bAxisEnabled	:= FALSE; 
 itmAxFunc.bMcHome		:= FALSE;
-itmAxFunc.bMcMoveVelo	:= FALSE;]]></ST>
+itmAxFunc.bMcMoveVelo	:= FALSE;
+
+
+IF itmAxFunc.stStatus.Disabled AND NOT itmAxFunc.stStatus.Error THEN
+	bNextStep := TRUE; 
+END_IF]]></ST>
+      </Implementation>
+      <ObjectProperties>
+        <XmlArchive>
+          <Data>
+            <o xml:space="preserve" t="ActionObjectDuplicationModeProperty">
+              <v n="Embedded">true</v>
+            </o>
+          </Data>
+          <TypeList>
+            <Type n="ActionObjectDuplicationModeProperty">{6a58c9ae-b0e2-4127-8d9c-cbfc36a09580}</Type>
+            <Type n="Boolean">System.Boolean</Type>
+          </TypeList>
+        </XmlArchive>
+      </ObjectProperties>
+    </Action>
+    <Action Name="_aMoveVelocity_active" Id="{b73dc277-e5af-49be-bf1c-f9a2ed93ec26}">
+      <Implementation>
+        <ST><![CDATA[]]></ST>
       </Implementation>
       <ObjectProperties>
         <XmlArchive>
@@ -81,7 +112,68 @@ itmAxFunc.bMcMoveVelo	:= FALSE;]]></ST>
     </Action>
     <Action Name="_aPowerOn_active" Id="{418f2a0c-d0cf-42c8-9771-11ec51a42d4e}">
       <Implementation>
-        <ST><![CDATA[itmAxFunc.bMcPower := TRUE;]]></ST>
+        <ST><![CDATA[itmAxFunc.bMcPower := TRUE;
+
+IF itmAxFunc.stStatus.Error THEN
+	errStr:= UDINT_TO_STRING(itmAxFunc.stStatus.ErrorID);
+END_IF
+]]></ST>
+      </Implementation>
+      <ObjectProperties>
+        <XmlArchive>
+          <Data>
+            <o xml:space="preserve" t="ActionObjectDuplicationModeProperty">
+              <v n="Embedded">true</v>
+            </o>
+          </Data>
+          <TypeList>
+            <Type n="ActionObjectDuplicationModeProperty">{6a58c9ae-b0e2-4127-8d9c-cbfc36a09580}</Type>
+            <Type n="Boolean">System.Boolean</Type>
+          </TypeList>
+        </XmlArchive>
+      </ObjectProperties>
+    </Action>
+    <Action Name="_aPowerOn_entry" Id="{a60dea07-68e1-4db5-81d7-dddb66b1931a}">
+      <Implementation>
+        <ST><![CDATA[bNextStep := FALSE;]]></ST>
+      </Implementation>
+      <ObjectProperties>
+        <XmlArchive>
+          <Data>
+            <o xml:space="preserve" t="ActionObjectDuplicationModeProperty">
+              <v n="Embedded">true</v>
+            </o>
+          </Data>
+          <TypeList>
+            <Type n="ActionObjectDuplicationModeProperty">{6a58c9ae-b0e2-4127-8d9c-cbfc36a09580}</Type>
+            <Type n="Boolean">System.Boolean</Type>
+          </TypeList>
+        </XmlArchive>
+      </ObjectProperties>
+    </Action>
+    <Action Name="_aStandby_active" Id="{4c691c8a-74a3-4ede-96f8-12eb64332c76}">
+      <Implementation>
+        <ST><![CDATA[IF bITMStart THEN
+	bNextStep:= TRUE;
+END_IF]]></ST>
+      </Implementation>
+      <ObjectProperties>
+        <XmlArchive>
+          <Data>
+            <o xml:space="preserve" t="ActionObjectDuplicationModeProperty">
+              <v n="Embedded">true</v>
+            </o>
+          </Data>
+          <TypeList>
+            <Type n="ActionObjectDuplicationModeProperty">{6a58c9ae-b0e2-4127-8d9c-cbfc36a09580}</Type>
+            <Type n="Boolean">System.Boolean</Type>
+          </TypeList>
+        </XmlArchive>
+      </ObjectProperties>
+    </Action>
+    <Action Name="_aStandby_entry" Id="{f35835ad-a084-41e8-ab10-5b42bf95f45a}">
+      <Implementation>
+        <ST><![CDATA[bNextStep := FALSE;]]></ST>
       </Implementation>
       <ObjectProperties>
         <XmlArchive>
@@ -145,7 +237,6 @@ ELSIF bGroupT1Rel THEN
 	IOs.doIO.t1RearEngValve		:= FALSE;
 	IOs.doIO.t1FrontDisengValve	:= TRUE;
 	IOs.doIO.t1RearDisengValve  := TRUE;	
-
 END_IF
 
 IF bGroupT2Act THEN 
@@ -312,7 +403,7 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
                           <o>
                             <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
                             <o n="Value" t="StringValue">
-                              <v n="Value">"itmAxFunc.Status"</v>
+                              <v n="Value">"bNextStep"</v>
                               <v n="DefaultValue">""</v>
                             </o>
                             <v n="Id">15L</v>
@@ -459,7 +550,7 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
                           <o>
                             <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                             <o n="Value" t="StringValue">
-                              <v n="Value">""</v>
+                              <v n="Value">"_aStandby_active"</v>
                               <v n="DefaultValue">""</v>
                             </o>
                             <v n="Id">125L</v>
@@ -468,7 +559,7 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
                           <o>
                             <v n="AttributeId">{a6b08bd8-b696-47e3-9cbf-7408b61c9ff8}</v>
                             <o n="Value" t="StringValue">
-                              <v n="Value">""</v>
+                              <v n="Value">"_aStandby_entry"</v>
                               <v n="DefaultValue">""</v>
                             </o>
                             <v n="Id">126L</v>
@@ -495,7 +586,7 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
                           <o>
                             <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
                             <o n="Value" t="StringValue">
-                              <v n="Value">"bITMStart"</v>
+                              <v n="Value">"bNextStep"</v>
                               <v n="DefaultValue">""</v>
                             </o>
                             <v n="Id">129L</v>
@@ -651,7 +742,7 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
                           <o>
                             <v n="AttributeId">{a6b08bd8-b696-47e3-9cbf-7408b61c9ff8}</v>
                             <o n="Value" t="StringValue">
-                              <v n="Value">""</v>
+                              <v n="Value">"_aPowerOn_entry"</v>
                               <v n="DefaultValue">""</v>
                             </o>
                             <v n="Id">54L</v>
@@ -1008,7 +1099,7 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
                           <o>
                             <v n="AttributeId">{700a583f-b4d4-43e4-8c14-629c7cd3bec8}</v>
                             <o n="Value" t="StringValue">
-                              <v n="Value">""</v>
+                              <v n="Value">"_aMoveVelocity_active"</v>
                               <v n="DefaultValue">""</v>
                             </o>
                             <v n="Id">91L</v>
@@ -1044,7 +1135,7 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
                           <o>
                             <v n="AttributeId">{38391c6d-6d4a-42f8-8ee7-9f45e5adafa8}</v>
                             <o n="Value" t="StringValue">
-                              <v n="Value">"itmAxFunc.McMoveVelocityInVelo"</v>
+                              <v n="Value">"bITMStart"</v>
                               <v n="DefaultValue">""</v>
                             </o>
                             <v n="Id">95L</v>
@@ -1554,6 +1645,7 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
     </Action>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
+      <LineId Id="81" Count="1" />
       <LineId Id="11" Count="0" />
       <LineId Id="15" Count="2" />
       <LineId Id="48" Count="0" />
@@ -1564,10 +1656,30 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
       <LineId Id="1" Count="0" />
     </LineIds>
     <LineIds Name="MAIN._aInit_active">
+      <LineId Id="9" Count="0" />
       <LineId Id="3" Count="0" />
       <LineId Id="1" Count="1" />
+      <LineId Id="5" Count="1" />
+      <LineId Id="4" Count="0" />
+      <LineId Id="7" Count="1" />
+    </LineIds>
+    <LineIds Name="MAIN._aMoveVelocity_active">
+      <LineId Id="1" Count="0" />
     </LineIds>
     <LineIds Name="MAIN._aPowerOn_active">
+      <LineId Id="1" Count="0" />
+      <LineId Id="4" Count="0" />
+      <LineId Id="3" Count="0" />
+      <LineId Id="5" Count="1" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN._aPowerOn_entry">
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN._aStandby_active">
+      <LineId Id="2" Count="2" />
+    </LineIds>
+    <LineIds Name="MAIN._aStandby_entry">
       <LineId Id="1" Count="0" />
     </LineIds>
     <LineIds Name="MAIN.act_IO_Mapping">
@@ -1604,7 +1716,6 @@ jigParams.parIMPVelocity := jigParams.parITMVelocity*(1 + jigParams.parIMPVelPrc
       <LineId Id="50" Count="0" />
       <LineId Id="71" Count="0" />
       <LineId Id="70" Count="0" />
-      <LineId Id="73" Count="0" />
       <LineId Id="46" Count="0" />
       <LineId Id="53" Count="2" />
       <LineId Id="98" Count="0" />
